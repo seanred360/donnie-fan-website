@@ -227,6 +227,10 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   margin-bottom: 36px;
 }
 
+.home-page .social-media {
+  margin-bottom: 36px;
+}
+
 .home-page .social-media .__social-button {
   display: flex;
   align-items: center;
@@ -239,5 +243,26 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   background: #ffffff;
   border-radius: 50%;
   filter: drop-shadow(4px 4px 4px #f4c203);
+}
+
+.home-page .video-button {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  padding: 0;
+}
+
+.home-page .video-button .__video-label {
+  position: absolute;
+  top: 30%;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.home-page .video-button .__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 /*# sourceMappingURL=style.css.map */

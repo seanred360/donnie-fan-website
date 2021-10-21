@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import donnieAtWindyCity from "../../images/pic.jpeg";
+import djTalking from "../../images/djTalking.jpeg";
 import { FaWeibo } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { AiFillWechat } from "react-icons/ai";
@@ -13,8 +14,13 @@ class HomePage extends Component {
           <p>Hi, I am</p>
           <h1>Donnie Fan!</h1>
         </div>
-        {/* <div className="hero-image"></div> */}
-        <img src={donnieAtWindyCity} alt="" className="hero-image" />
+
+        <img
+          className="hero-image"
+          src={donnieAtWindyCity}
+          alt="Donnie performing at Windy City Comedy Club"
+        />
+
         <div className="social-media flex flex-ai-c flex-jc-c">
           <button className="__social-button">
             <FaWeibo />
@@ -29,6 +35,11 @@ class HomePage extends Component {
             <AiFillYoutube />
           </button>
         </div>
+
+        <button className="video-button">
+          <span className='__video-label'>WATCH MY COMEDY</span>
+          <img className="__video" src={djTalking} alt="Donnie performing" />
+        </button>
       </div>
     );
   }

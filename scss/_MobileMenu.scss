@@ -1,0 +1,54 @@
+.fade-overlay {
+  background: transparent;
+  z-index: 2;
+
+  &.--open {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+  }
+}
+
+.mobile-menu-container {
+  position: absolute;
+  width: 271px;
+  height: 100vh;
+  right: -100%;
+  top: 72px;
+  background: $black;
+  border-left: 3px solid $yellow;
+  transition: all 0.3s ease;
+  z-index: 10;
+
+
+  &.--open {
+    right: 0;
+  }
+
+  .__mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 223px;
+    height: 380px;
+    margin: 1.5rem;
+    border-radius: 10px;
+
+    .--menu-item {
+      color: $white;
+      text-align: left;
+      @include font-size(40);
+      @include line-height(60);
+
+      &::before {
+        display: inline-block;
+        content: "";
+        width: 6px;
+        height: 46px;
+        margin-right: 13px;
+        background: $yellow;
+      }
+    }
+  }
+}

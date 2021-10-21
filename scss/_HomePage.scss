@@ -1,0 +1,46 @@
+.home-page {
+  max-width: 1400px;
+  margin: 24px 36px;
+  .header {
+    line-height: 60px;
+    text-align: center;
+    p {
+      @include font-size(24);
+      font-weight: 200;
+      margin: 0;
+    }
+    h1 {
+      @include font-size(48);
+      font-weight: 700;
+      margin: 0;
+      margin-bottom: 36px;
+    }
+  }
+
+  .hero-image {
+    width: 300px;
+    height: 300px;
+    background-image: url("../../images/pic.jpeg");
+    //background-image: url("../src/images/pic.jpeg");
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 100% 0;
+    margin-bottom: 36px;
+  }
+
+  .social-media {
+    .__social-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      margin-left: 6px;
+      @include font-size(45);
+      color: $black;
+      background: $white;
+      border-radius: 50%;
+      filter: drop-shadow(4px 4px 4px #f4c203);
+    }
+  }
+}

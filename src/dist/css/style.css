@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&display=swap");
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: block;
+  position: relative;
+  font-family: "MuseoModerno", cursive;
+  background: black;
+  background-repeat: no-repeat;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5625rem;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body ul {
+  list-style: none;
+}
+
+body button {
+  font-family: "MuseoModerno", cursive;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+}
+
+.container {
+  margin: 0px 1rem;
+  max-width: 1400px;
+}
+
+@media (min-width: 992px) {
+  .container {
+    margin: auto;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-ai-c {
+  align-items: center;
+}
+
+Link {
+  text-decoration: none;
+}
+
+Link:focus, Link:hover, Link:visited, Link:link, Link:active {
+  text-decoration: none;
+}
+
+.nav-bar__container {
+  width: 100%;
+  height: 72px;
+  padding: 1rem 1.5rem;
+  background: radial-gradient(128.88% 128.88% at 103.9% -10.39%, black 0%, black 53.09%, black 100%);
+  font-size: 1.5rem;
+  color: #ffffff;
+  border: 1px solid #f4c203;
+}
+
+.nav-bar__container .nav-bar .__left-content .__language .--language-button {
+  font-size: 1.5rem;
+}
+
+.nav-bar__container .nav-bar .hamburger-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+
+.nav-bar__container .nav-bar .hamburger-button .line {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 8;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-bar__container .nav-bar .hamburger-button .line--1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 8;
+}
+
+.nav-bar__container .nav-bar .hamburger-button .line--2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 8;
+}
+
+.nav-bar__container .nav-bar .hamburger-button .line--3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 8;
+}
+
+.nav-bar__container .nav-bar .hamburger-button.open .line--1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.nav-bar__container .nav-bar .hamburger-button.open .line--2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+
+.nav-bar__container .nav-bar .hamburger-button.open .line--3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.fade-overlay {
+  background: transparent;
+  z-index: 2;
+}
+
+.fade-overlay.--open {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.mobile-menu-container {
+  position: absolute;
+  width: 271px;
+  height: 100vh;
+  right: -100%;
+  top: 72px;
+  background: black;
+  border-left: 3px solid #f4c203;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.mobile-menu-container.--open {
+  right: 0;
+}
+
+.mobile-menu-container .__mobile-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 223px;
+  height: 380px;
+  margin: 1.5rem;
+  border-radius: 10px;
+}
+
+.mobile-menu-container .__mobile-menu .--menu-item {
+  color: #ffffff;
+  text-align: left;
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+}
+
+.mobile-menu-container .__mobile-menu .--menu-item::before {
+  display: inline-block;
+  content: "";
+  width: 6px;
+  height: 46px;
+  margin-right: 13px;
+  background: #f4c203;
+}
+
+.home-page {
+  max-width: 1400px;
+  margin: 24px 36px;
+}
+
+.home-page .header {
+  line-height: 60px;
+  text-align: center;
+}
+
+.home-page .header p {
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin: 0;
+}
+
+.home-page .header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 36px;
+}
+
+.home-page .hero-image {
+  width: 300px;
+  height: 300px;
+  background-image: url("../../images/pic.jpeg");
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 100% 0;
+  margin-bottom: 36px;
+}
+
+.home-page .social-media .__social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  margin-left: 6px;
+  font-size: 2.8125rem;
+  color: black;
+  background: #ffffff;
+  border-radius: 50%;
+  filter: drop-shadow(4px 4px 4px #f4c203);
+}
+/*# sourceMappingURL=style.css.map */

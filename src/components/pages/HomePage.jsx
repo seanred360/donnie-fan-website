@@ -14,12 +14,13 @@ class HomePage extends Component {
           <p>Hi, I am</p>
           <h1>Donnie Fan!</h1>
         </div>
-
-        <img
-          className="hero-image"
-          src={donnieAtWindyCity}
-          alt="Donnie performing at Windy City Comedy Club"
-        />
+        <div className="hero-image-wrapper flex flex-ai-c flex-jc-c">
+          <img
+            className="hero-image"
+            src={donnieAtWindyCity}
+            alt="Donnie performing at Windy City Comedy Club"
+          />
+        </div>
 
         <div className="social-media flex flex-ai-c flex-jc-c">
           <button className="__social-button">
@@ -37,9 +38,17 @@ class HomePage extends Component {
         </div>
 
         <button className="video-button">
-          <span className='__video-label'>WATCH MY COMEDY</span>
+          <h2 className="__video-label">WATCH MY COMEDY</h2>
           <img className="__video" src={djTalking} alt="Donnie performing" />
         </button>
+
+        <div className="social-feed">
+          <div className="text-group">
+            <h3 className="__header">Latest Weibo</h3>
+            <p className="__label">See What I'm currently doing</p>
+          </div>
+          <div className="__social-window"></div>
+        </div>
       </div>
     );
   }

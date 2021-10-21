@@ -49,11 +49,13 @@
     position: relative;
     width: 100%;
     height: 200px;
+    margin-bottom: 36px;
     padding: 0;
 
     .__video-label {
       position: absolute;
       top: 30%;
+      margin: 0;
       font-weight: 900;
       font-size: 36px;
       line-height: 40px;
@@ -63,6 +65,30 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+
+  .social-feed {
+    .text-group {
+      border-left: 6px solid $yellow;
+      padding-left: 10px;
+      margin-bottom: 36px;
+    }
+    .__header {
+      margin-bottom: 10px;
+    }
+
+    .__label {
+      margin: 0;
+      @include font-size(16);
+      font-weight: 100;
+      line-height: 16px;
+    }
+
+    .__social-window {
+      width: 300px;
+      height: 350px;
+      background: $white;
     }
   }
 }

@@ -1,11 +1,10 @@
 import React from "react";
 import djTalking from "../images/djTalking.jpeg";
 
-
-const VideoPreviewButton = () => {
+const VideoPreviewButton = ({ label }) => {
   return (
     <button className="video-preview-button">
-      <h2 className="__video-label">WATCH MY COMEDY</h2>
+      <h2 className="__video-label">{label}</h2>
       <img className="__video" src={djTalking} alt="Donnie performing" />
     </button>
   );

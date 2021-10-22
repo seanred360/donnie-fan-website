@@ -14,7 +14,8 @@
         "../../../scss/_VideoPreviewButton.scss",
         "../../../scss/_SocialMediaFeed.scss",
         "../../../scss/_ContactForm.scss",
-        "../../../scss/_AboutPage.scss"
+        "../../../scss/_AboutPage.scss",
+        "../../../scss/_VideosPage.scss"
     ],
     "names": [],
     "file": "style.css"

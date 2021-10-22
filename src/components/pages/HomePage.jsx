@@ -23,7 +23,7 @@ class HomePage extends Component {
 
         <SocialMediaButtons />
 
-        <VideoPreviewButton />
+        <VideoPreviewButton label='WATCH MY COMEDY'/>
 
         <SocialMediaFeed />
 

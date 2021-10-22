@@ -1,0 +1,43 @@
+.events-calendar {
+  .event {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-bottom: 4px solid $yellow;
+
+    .__calendar {
+      position: relative;
+      .--calendar-icon {
+        width: 100px;
+        height: 100px;
+      }
+      .--calendar-label {
+        position: absolute;
+        top: 50px;
+        left: 22px;
+      }
+    }
+
+    .__event-text-group {
+      .--city-name {
+        margin: 0;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 24px;
+      }
+      .--event-time-location {
+        margin: 0;
+        font-weight: 200;
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+.__event-poster {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border: 4px solid $white;
+  object-fit: cover;
+}

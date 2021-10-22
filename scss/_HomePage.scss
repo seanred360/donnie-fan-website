@@ -17,6 +17,27 @@
     }
   }
 
+  // page globals
+
+  .section-header-group {
+    border-left: 6px solid $yellow;
+    padding-left: 10px;
+    margin-bottom: 36px;
+
+    .__header {
+      margin-bottom: 10px;
+    }
+
+    .__label {
+      margin: 0;
+      @include font-size(16);
+      font-weight: 100;
+      line-height: 16px;
+    }
+  }
+
+  // end page globals
+
   .hero-image {
     width: 300px;
     height: 300px;
@@ -30,7 +51,7 @@
 
   .social-media {
     margin-bottom: 36px;
-    .__social-button {
+    .__circle-button {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -69,26 +90,48 @@
   }
 
   .social-feed {
-    .text-group {
-      border-left: 6px solid $yellow;
-      padding-left: 10px;
-      margin-bottom: 36px;
-    }
-    .__header {
-      margin-bottom: 10px;
-    }
-
-    .__label {
-      margin: 0;
-      @include font-size(16);
-      font-weight: 100;
-      line-height: 16px;
-    }
-
     .__social-window {
       width: 300px;
       height: 350px;
       background: $white;
+      margin-bottom: 36px;
+    }
+  }
+
+  .contact {
+    .contact-options {
+      flex-direction: column;
+
+      .__contact-option {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin-right: auto;
+        margin-bottom: 36px;
+
+        .__circle-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 88px;
+          height: 88px;
+          margin-left: 6px;
+          @include font-size(62);
+          color: $black;
+          background: $white;
+          border-radius: 50%;
+          filter: drop-shadow(4px 4px 4px #f4c203);
+        }
+
+        .--label {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+          margin-left: 1.5rem;
+          text-align: left;
+          @include font-size(24);
+        }
+      }
     }
   }
 }

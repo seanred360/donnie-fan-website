@@ -97,7 +97,7 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   background: radial-gradient(128.88% 128.88% at 103.9% -10.39%, black 0%, black 53.09%, black 100%);
   font-size: 1.5rem;
   color: #ffffff;
-  border: 1px solid #f4c203;
+  border: 3px solid #f4c203;
 }
 
 .nav-bar__container .nav-bar .__left-content .__language .--language-button {
@@ -229,6 +229,23 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   margin-bottom: 36px;
 }
 
+.home-page .section-header-group {
+  border-left: 6px solid #f4c203;
+  padding-left: 10px;
+  margin-bottom: 36px;
+}
+
+.home-page .section-header-group .__header {
+  margin-bottom: 10px;
+}
+
+.home-page .section-header-group .__label {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 16px;
+}
+
 .home-page .hero-image {
   width: 300px;
   height: 300px;
@@ -243,7 +260,7 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   margin-bottom: 36px;
 }
 
-.home-page .social-media .__social-button {
+.home-page .social-media .__circle-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -280,26 +297,45 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   object-fit: cover;
 }
 
-.home-page .social-feed .text-group {
-  border-left: 6px solid #f4c203;
-  padding-left: 10px;
-  margin-bottom: 36px;
-}
-
-.home-page .social-feed .__header {
-  margin-bottom: 10px;
-}
-
-.home-page .social-feed .__label {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 100;
-  line-height: 16px;
-}
-
 .home-page .social-feed .__social-window {
   width: 300px;
   height: 350px;
   background: #ffffff;
+  margin-bottom: 36px;
+}
+
+.home-page .contact .contact-options {
+  flex-direction: column;
+}
+
+.home-page .contact .contact-options .__contact-option {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-right: auto;
+  margin-bottom: 36px;
+}
+
+.home-page .contact .contact-options .__contact-option .__circle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  margin-left: 6px;
+  font-size: 3.875rem;
+  color: black;
+  background: #ffffff;
+  border-radius: 50%;
+  filter: drop-shadow(4px 4px 4px #f4c203);
+}
+
+.home-page .contact .contact-options .__contact-option .--label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-left: 1.5rem;
+  text-align: left;
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */

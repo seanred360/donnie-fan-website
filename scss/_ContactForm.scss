@@ -1,0 +1,36 @@
+.contact-form {
+  .contact-options {
+    flex-direction: column;
+
+    .__contact-option {
+      display: grid;
+      grid-template-columns: auto auto;
+      margin-right: auto;
+      margin-bottom: 36px;
+
+      .__circle-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 88px;
+        height: 88px;
+        margin-left: 6px;
+        @include font-size(62);
+        color: $black;
+        background: $white;
+        border-radius: 50%;
+        filter: drop-shadow(4px 4px 4px #f4c203);
+      }
+
+      .--label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        margin-left: 1.5rem;
+        text-align: left;
+        @include font-size(24);
+      }
+    }
+  }
+}

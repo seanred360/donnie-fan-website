@@ -262,11 +262,11 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   margin-bottom: 36px;
 }
 
-.home-page .social-media {
+.social-media-buttons {
   margin-bottom: 36px;
 }
 
-.home-page .social-media .__circle-button {
+.social-media-buttons .__circle-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -280,7 +280,7 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   filter: drop-shadow(4px 4px 4px #f4c203);
 }
 
-.home-page .video-button {
+.video-preview-button {
   position: relative;
   width: 100%;
   height: 200px;
@@ -288,7 +288,7 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   padding: 0;
 }
 
-.home-page .video-button .__video-label {
+.video-preview-button .__video-label {
   position: absolute;
   top: 30%;
   margin: 0;
@@ -297,31 +297,31 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   line-height: 40px;
 }
 
-.home-page .video-button .__video {
+.video-preview-button .__video {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.home-page .social-feed .__social-window {
+.social-media-feed .__social-window {
   width: 300px;
   height: 350px;
   background: #ffffff;
   margin-bottom: 36px;
 }
 
-.home-page .contact .contact-options {
+.contact-form .contact-options {
   flex-direction: column;
 }
 
-.home-page .contact .contact-options .__contact-option {
+.contact-form .contact-options .__contact-option {
   display: grid;
   grid-template-columns: auto auto;
   margin-right: auto;
   margin-bottom: 36px;
 }
 
-.home-page .contact .contact-options .__contact-option .__circle-button {
+.contact-form .contact-options .__contact-option .__circle-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -335,7 +335,7 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   filter: drop-shadow(4px 4px 4px #f4c203);
 }
 
-.home-page .contact .contact-options .__contact-option .--label {
+.contact-form .contact-options .__contact-option .--label {
   display: flex;
   justify-content: center;
   align-items: center;

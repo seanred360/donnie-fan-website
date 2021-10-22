@@ -1,0 +1,16 @@
+.social-media-buttons {
+  margin-bottom: 36px;
+  .__circle-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    margin-left: 6px;
+    @include font-size(45);
+    color: $black;
+    background: $white;
+    border-radius: 50%;
+    filter: drop-shadow(4px 4px 4px #f4c203);
+  }
+}

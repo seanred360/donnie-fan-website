@@ -91,6 +91,28 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   text-decoration: none;
 }
 
+.page-wrapper {
+  max-width: 1440px;
+  margin: 24px 36px;
+}
+
+.section-header-group {
+  border-left: 6px solid #f4c203;
+  padding-left: 10px;
+  margin: 36px 0px;
+}
+
+.section-header-group .__header {
+  margin-bottom: 10px;
+}
+
+.section-header-group .__label {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 16px;
+}
+
 .footer {
   width: 100vw;
   height: 200px;
@@ -269,11 +291,6 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   border-radius: 0.125rem;
 }
 
-.home-page {
-  max-width: 1400px;
-  margin: 24px 36px;
-}
-
 .home-page .header {
   line-height: 60px;
   text-align: center;
@@ -290,23 +307,6 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   font-weight: 700;
   margin: 0;
   margin-bottom: 36px;
-}
-
-.home-page .section-header-group {
-  border-left: 6px solid #f4c203;
-  padding-left: 10px;
-  margin-bottom: 36px;
-}
-
-.home-page .section-header-group .__header {
-  margin-bottom: 10px;
-}
-
-.home-page .section-header-group .__label {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 100;
-  line-height: 16px;
 }
 
 .home-page .hero-image {
@@ -400,5 +400,12 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   margin-left: 1.5rem;
   text-align: left;
   font-size: 1.5rem;
+}
+
+.about-page .__about-photo {
+  width: 309px;
+  height: 251px;
+  object-fit: cover;
+  margin: 36px 0px;
 }
 /*# sourceMappingURL=style.css.map */

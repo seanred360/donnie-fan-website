@@ -1,6 +1,4 @@
 .home-page {
-  max-width: 1400px;
-  margin: 24px 36px;
   .header {
     line-height: 60px;
     text-align: center;
@@ -14,23 +12,6 @@
       font-weight: 700;
       margin: 0;
       margin-bottom: 36px;
-    }
-  }
-
-  .section-header-group {
-    border-left: 6px solid $yellow;
-    padding-left: 10px;
-    margin-bottom: 36px;
-
-    .__header {
-      margin-bottom: 10px;
-    }
-
-    .__label {
-      margin: 0;
-      @include font-size(16);
-      font-weight: 100;
-      line-height: 16px;
     }
   }
 

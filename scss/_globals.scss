@@ -94,6 +94,28 @@ Link {
   }
 }
 
+.page-wrapper {
+  max-width: 1440px;
+  margin: 24px 36px;
+}
+
+.section-header-group {
+  border-left: 6px solid $yellow;
+  padding-left: 10px;
+  margin: 36px 0px;
+
+  .__header {
+    margin-bottom: 10px;
+  }
+
+  .__label {
+    margin: 0;
+    @include font-size(16);
+    font-weight: 100;
+    line-height: 16px;
+  }
+}
+
 .footer {
   width: 100vw;
   height: 200px;

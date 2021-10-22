@@ -6,7 +6,7 @@ const Navigationbutton = ({ label, onOpen }) => {
 
   function handleClick() {
     history.push(`/${label}`.toLocaleLowerCase());
-    onOpen();
+    onOpen()
   }
   return (
     <button className="navigation-button" onClick={handleClick}>

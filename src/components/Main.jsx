@@ -15,6 +15,7 @@ class Main extends Component {
         <Route exact path="/videos" component={VideosPage}></Route>
         <Route exact path="/events" component={EventsCalendar}></Route>
         <Route exact path="/" component={HomePage}></Route>
+        <Route exact path="/home" component={HomePage}></Route>
         <Route path="" component={NotFound}></Route>
       </Switch>
     );

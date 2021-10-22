@@ -219,14 +219,14 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   border-radius: 10px;
 }
 
-.mobile-menu-container .__mobile-menu .--menu-item {
+.mobile-menu-container .__mobile-menu .navigation-button {
   color: #ffffff;
   text-align: left;
   font-size: 2.5rem;
   line-height: 3.75rem;
 }
 
-.mobile-menu-container .__mobile-menu .--menu-item::before {
+.mobile-menu-container .__mobile-menu .navigation-button::before {
   display: inline-block;
   content: "";
   width: 6px;

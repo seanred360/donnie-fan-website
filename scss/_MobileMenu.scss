@@ -21,7 +21,6 @@
   transition: all 0.3s ease;
   z-index: 10;
 
-
   &.--open {
     right: 0;
   }
@@ -35,7 +34,7 @@
     margin: 1.5rem;
     border-radius: 10px;
 
-    .--menu-item {
+    .navigation-button {
       color: $white;
       text-align: left;
       @include font-size(40);

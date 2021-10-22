@@ -13,7 +13,7 @@ class Menu extends Component {
     return (
       <div className="menu">
         <NavBar onOpen={this.handleOpen} />
-        <MobileMenu isOpen={this.state.isOpen} />
+        <MobileMenu isOpen={this.state.isOpen} onOpen={this.handleOpen} />
       </div>
     );
   }

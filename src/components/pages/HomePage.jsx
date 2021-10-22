@@ -8,7 +8,7 @@ import ContactForm from "../common/ContactForm";
 class HomePage extends Component {
   render() {
     return (
-      <div className="home-page">
+      <div className="home-page flex flex-ai-c flex-jc-c">
         <div className="header">
           <p>Hi, I am</p>
           <h1>Donnie Fan!</h1>

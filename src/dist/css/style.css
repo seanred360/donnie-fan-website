@@ -291,6 +291,10 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   border-radius: 0.125rem;
 }
 
+.home-page {
+  flex-direction: column;
+}
+
 .home-page .header {
   line-height: 60px;
   text-align: center;
@@ -400,6 +404,38 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   margin-left: 1.5rem;
   text-align: left;
   font-size: 1.5rem;
+}
+
+.contact-form .__contact-form * {
+  margin-bottom: 12px;
+}
+
+.contact-form .__contact-form .--name-input,
+.contact-form .__contact-form .--email-input {
+  width: 100%;
+  height: 50px;
+  padding-left: 1rem;
+  font-family: "MuseoModerno", cursive;
+}
+
+.contact-form .__contact-form .--message-input {
+  width: 100%;
+  height: 204px;
+  padding: 1rem;
+  font-family: "MuseoModerno", cursive;
+  resize: none;
+}
+
+.contact-form .__contact-form .--send-message {
+  width: 200px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #f4c203;
+  font-family: "MuseoModerno", cursive;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
 }
 
 .about-page .__about-photo {

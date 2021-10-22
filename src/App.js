@@ -9,7 +9,6 @@ function App() {
       <div className="page-wrapper">
         <Main />
       </div>
-
       <Footer />
     </div>
   );

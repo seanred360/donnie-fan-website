@@ -1,7 +1,7 @@
 import React from "react";
 import { GiMicrophone } from "react-icons/gi";
 import { FaHandshake } from "react-icons/fa";
-import { GiNewspaper } from "react-icons/gi";
+import { BsBookHalf } from "react-icons/bs";
 import { FaNewspaper } from "react-icons/fa";
 import { MdWavingHand } from "react-icons/md";
 
@@ -29,7 +29,7 @@ const ContactForm = () => {
 
         <div className="__contact-option">
           <button className="__circle-button">
-            <GiNewspaper />
+            <BsBookHalf />
           </button>
           <p className="--label">I am a publisher</p>
         </div>

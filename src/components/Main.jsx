@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
+import AboutPage from "./pages/AboutPage";
 import HomePage from "./pages/HomePage";
-import NotFound from "./pages/NotFound";
+import NotFound from "./pages/NotFoundPage";
 
 class Main extends Component {
   state = {
@@ -13,8 +14,9 @@ class Main extends Component {
     return (
       <Switch>
         {/* The Switch decides which component to show based on the current URL.*/}
-        <Route exact path="/not-found" component={NotFound}></Route>
+        <Route exact path="/about" component={AboutPage}></Route>
         <Route exact path="/" component={HomePage}></Route>
+        <Route path="" component={NotFound}></Route>
       </Switch>
     );
   }

@@ -3,7 +3,7 @@ import donnieAtWindyCity from "../../images/pic.jpeg";
 import SocialMediaButtons from "../common/SocialMediaButtons";
 import VideoPreviewButton from "../VideoPreviewButton";
 import SocialMediaFeed from "../common/SocialMediaFeed";
-import ContactForm from "../common/ContactFrom";
+import ContactForm from "../common/ContactForm";
 
 class HomePage extends Component {
   render() {

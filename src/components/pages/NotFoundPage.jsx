@@ -1,7 +1,7 @@
 import React from "react";
 import BackButton from "../common/BackButton";
 
-const NotFound = () => {
+const NotFoundPage = () => {
   return (
     <section className="page-404 forground-color hover-color">
       <div className="caveman-image">
@@ -16,4 +16,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default NotFoundPage;

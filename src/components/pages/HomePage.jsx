@@ -9,7 +9,7 @@ class HomePage extends Component {
   render() {
     return (
       <div className="home-page flex flex-ai-c flex-jc-c">
-        <div className="header">
+        <div className="header fade-in-section is-visible">
           <p>Hi, I am</p>
           <h1>Donnie Fan!</h1>
         </div>
@@ -23,7 +23,7 @@ class HomePage extends Component {
 
         <SocialMediaButtons />
 
-        <VideoPreviewButton label='WATCH MY COMEDY'/>
+        <VideoPreviewButton label="WATCH MY COMEDY" />
 
         <SocialMediaFeed />
 

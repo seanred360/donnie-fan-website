@@ -8,6 +8,16 @@ import { MdWavingHand } from "react-icons/md";
 
 const ContactForm = () => {
   const [isOptionSelected, setisOptionSelected] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [mailSent, setMailSent] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    console.log('name ' + name + ' email ' + email + ' message ' + message);
+  };
 
   if (!isOptionSelected)
     return (
@@ -78,19 +88,37 @@ const ContactForm = () => {
             Send me a message so we can start a conversation
           </p>
         </div>
-        <form action="" className="__contact-form">
-          <input type="text" className="--name-input" name='name' placeholder="Your name" />
+        <form className="__contact-form" action="/action_page.php">
           <input
             type="text"
-            className="--email-input" name='email'
+            className="--name-input"
+            name="name"
+            placeholder="Your name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input
+            type="email"
+            className="--email-input"
+            name="email"
             placeholder="Your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <textarea
             type="text"
-            className="--message-input" name='message'
+            className="--message-input"
+            name="message"
             placeholder="Write your message here"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
           />
-          <input type="submit" className="--send-message" value='Submit' />
+          <input
+            type="submit"
+            className="--send-message"
+            value="Submit"
+            onClick={(e) => handleFormSubmit(e)}
+          />
         </form>
       </div>
     );

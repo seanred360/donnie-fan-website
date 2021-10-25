@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import { GiMicrophone } from "react-icons/gi";
 import { FaHandshake } from "react-icons/fa";
@@ -7,7 +8,8 @@ import { FaNewspaper } from "react-icons/fa";
 import { MdWavingHand } from "react-icons/md";
 import FadeInSection from "./FadeInSection";
 
-const ContactForm = () => {
+const ContactForm = (props) => {
+  const history = useHistory();
   const contactform = useRef();
   const [isOptionSelected, setisOptionSelected] = useState(false);
   const [name, setName] = useState("");
@@ -39,65 +41,65 @@ const ContactForm = () => {
           </FadeInSection>
         </div>
         <div className="contact-options flex flex-ai-c flex-jc-c">
-          <FadeInSection>
-            <div className="__contact-option">
-              <button
-                className="__circle-button"
-                onClick={() => setisOptionSelected(!isOptionSelected)}
-              >
-                <GiMicrophone />
-              </button>
+          <div className="__contact-option">
+            <button
+              className="__circle-button"
+              onClick={() => setisOptionSelected(!isOptionSelected)}
+            >
+              <GiMicrophone />
+            </button>
+            <FadeInSection>
               <p className="--label">I want to book you</p>
-            </div>
-          </FadeInSection>
+            </FadeInSection>
+          </div>
 
-          <FadeInSection>
-            <div className="__contact-option">
-              <button
-                className="__circle-button"
-                onClick={() => setisOptionSelected(!isOptionSelected)}
-              >
-                <FaHandshake />
-              </button>
+          <div className="__contact-option">
+            <button
+              className="__circle-button"
+              onClick={() => setisOptionSelected(!isOptionSelected)}
+            >
+              <FaHandshake />
+            </button>
+            <FadeInSection>
               <p className="--label">I have a business opportunity</p>
-            </div>
-          </FadeInSection>
+            </FadeInSection>
+          </div>
 
-          <FadeInSection>
-            <div className="__contact-option">
-              <button
-                className="__circle-button"
-                onClick={() => setisOptionSelected(!isOptionSelected)}
-              >
-                <BsBookHalf />
-              </button>
+          <div className="__contact-option">
+            <button
+              className="__circle-button"
+              onClick={() => setisOptionSelected(!isOptionSelected)}
+            >
+              <BsBookHalf />
+            </button>
+            <FadeInSection>
               <p className="--label">I am a publisher</p>
-            </div>
-          </FadeInSection>
+            </FadeInSection>
+          </div>
 
-          <FadeInSection>
-            <div className="__contact-option">
-              <button
-                className="__circle-button"
-                onClick={() => setisOptionSelected(!isOptionSelected)}
-              >
-                <FaNewspaper />
-              </button>
+          <div className="__contact-option">
+            <button
+              className="__circle-button"
+              onClick={() => setisOptionSelected(!isOptionSelected)}
+            >
+              <FaNewspaper />
+            </button>
+            <FadeInSection>
               <p className="--label">I am in the media</p>
-            </div>
-          </FadeInSection>
+            </FadeInSection>
+          </div>
 
-          <FadeInSection>
-            <div className="__contact-option">
-              <button
-                className="__circle-button"
-                onClick={() => setisOptionSelected(!isOptionSelected)}
-              >
-                <MdWavingHand />
-              </button>
+          <div className="__contact-option">
+            <button
+              className="__circle-button"
+              onClick={() => setisOptionSelected(!isOptionSelected)}
+            >
+              <MdWavingHand />
+            </button>
+            <FadeInSection>
               <p className="--label">I just wanted to say hi!</p>
-            </div>
-          </FadeInSection>
+            </FadeInSection>
+          </div>
         </div>
       </div>
     );

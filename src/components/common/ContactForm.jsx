@@ -1,17 +1,15 @@
-import React, { useRef, useEffect } from "react";
-import { useHistory } from "react-router-dom";
-import { useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
+import emailjs from "emailjs-com";
+import FadeInSection from "./FadeInSection";
 import { GiMicrophone } from "react-icons/gi";
 import { FaHandshake } from "react-icons/fa";
 import { BsBookHalf } from "react-icons/bs";
 import { FaNewspaper } from "react-icons/fa";
 import { MdWavingHand } from "react-icons/md";
-import FadeInSection from "./FadeInSection";
 
 const ContactForm = (props) => {
-  const history = useHistory();
-  const contactform = useRef();
-  const [isOptionSelected, setisOptionSelected] = useState(false);
+  const contactForm = useRef();
+  const [selectedReason, setSelectedReason] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -19,19 +17,34 @@ const ContactForm = (props) => {
   // const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (isOptionSelected && contactform.current) {
-      contactform.current.scrollIntoView({
+    if (selectedReason && contactForm.current) {
+      contactForm.current.scrollIntoView({
         behavior: "smooth",
       });
     }
-  }, [isOptionSelected]);
+  }, [selectedReason]);
 
-  const handleFormSubmit = (event) => {
+  const sendEmail = (event) => {
     event.preventDefault();
-    console.log("name " + name + " email " + email + " message " + message);
+
+    emailjs
+      .sendForm(
+        "DonnieFanGmailService",
+        "DonnieFanEmailTemplate",
+        event.target,
+        "user_aHJJrmyRNc0qGAYv0sKKe"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
-  if (!isOptionSelected)
+  if (!selectedReason)
     return (
       <div className="contact-form">
         <div className="section-header-group">
@@ -44,7 +57,7 @@ const ContactForm = (props) => {
           <div className="__contact-option">
             <button
               className="__circle-button"
-              onClick={() => setisOptionSelected(!isOptionSelected)}
+              onClick={() => setSelectedReason("I want to book you")}
             >
               <GiMicrophone />
             </button>
@@ -56,7 +69,7 @@ const ContactForm = (props) => {
           <div className="__contact-option">
             <button
               className="__circle-button"
-              onClick={() => setisOptionSelected(!isOptionSelected)}
+              onClick={() => setSelectedReason("I have a business opportunity")}
             >
               <FaHandshake />
             </button>
@@ -68,7 +81,7 @@ const ContactForm = (props) => {
           <div className="__contact-option">
             <button
               className="__circle-button"
-              onClick={() => setisOptionSelected(!isOptionSelected)}
+              onClick={() => setSelectedReason("I am a publisher")}
             >
               <BsBookHalf />
             </button>
@@ -80,7 +93,7 @@ const ContactForm = (props) => {
           <div className="__contact-option">
             <button
               className="__circle-button"
-              onClick={() => setisOptionSelected(!isOptionSelected)}
+              onClick={() => setSelectedReason("I am in the media")}
             >
               <FaNewspaper />
             </button>
@@ -92,7 +105,7 @@ const ContactForm = (props) => {
           <div className="__contact-option">
             <button
               className="__circle-button"
-              onClick={() => setisOptionSelected(!isOptionSelected)}
+              onClick={() => setSelectedReason("I just wanted to say hi!")}
             >
               <MdWavingHand />
             </button>
@@ -105,7 +118,7 @@ const ContactForm = (props) => {
     );
   else
     return (
-      <div className="contact-form" ref={contactform}>
+      <div className="contact-form">
         <FadeInSection>
           <div className="section-header-group">
             <h3 className="__header">Let's meet</h3>
@@ -113,7 +126,17 @@ const ContactForm = (props) => {
               Send me a message so we can start a conversation
             </p>
           </div>
-          <form className="__contact-form" action="/action_page.php">
+          <form
+            className="__contact-form"
+            ref={contactForm}
+            onSubmit={sendEmail}
+          >
+            <input
+              type="text"
+              className="--option-input"
+              name="selectedReason"
+              defaultValue={selectedReason}
+            />
             <input
               type="text"
               className="--name-input"
@@ -141,8 +164,8 @@ const ContactForm = (props) => {
             <input
               type="submit"
               className="--send-message"
-              value="Submit"
-              onClick={(e) => handleFormSubmit(e)}
+              value="Send"
+              // onClick={(e) => sendEmail(e)}
             />
           </form>
         </FadeInSection>

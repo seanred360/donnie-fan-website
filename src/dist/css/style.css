@@ -451,6 +451,10 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   margin-bottom: 12px;
 }
 
+.contact-form .__contact-form .--option-input {
+  display: none;
+}
+
 .contact-form .__contact-form .--name-input,
 .contact-form .__contact-form .--email-input {
   width: 100%;

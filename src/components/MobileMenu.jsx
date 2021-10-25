@@ -11,7 +11,6 @@ const MobileMenu = ({ isOpen, onOpen }) => {
           <Navigationbutton onOpen={onOpen} label="About" />
           <Navigationbutton onOpen={onOpen} label="Events" />
           <Navigationbutton onOpen={onOpen} label="Videos" />
-          <Navigationbutton onOpen={onOpen} label="Portfolio" />
           <Navigationbutton onOpen={onOpen} label="Contact" />
         </div>
       </div>

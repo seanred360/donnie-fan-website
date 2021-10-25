@@ -1,5 +1,6 @@
 import React from "react";
 import aboutPhoto from "../../images/donnie-at-comedy-club-china.jpg";
+import FadeInSection from "../common/FadeInSection";
 
 const AboutPage = () => {
   return (
@@ -9,19 +10,23 @@ const AboutPage = () => {
         <p className="__label">Donnie Fan</p>
       </div>
 
-      <section>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur
-        temporibus et velit consequatur accusantium porro placeat deleniti
-        reiciendis magni, dolore rem nemo commodi animi suscipit, iusto,
-        veritatis quidem minima sint! Excepturi dolorum id doloremque architecto
-        quos modi fugiat asperiores deserunt voluptatibus ducimus omnis dolorem
-        exercitationem, accusantium temporibus. Illo, eos alias.
-      </section>
+      <FadeInSection>
+        <section>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur
+          temporibus et velit consequatur accusantium porro placeat deleniti
+          reiciendis magni, dolore rem nemo commodi animi suscipit, iusto,
+          veritatis quidem minima sint! Excepturi dolorum id doloremque
+          architecto quos modi fugiat asperiores deserunt voluptatibus ducimus
+          omnis dolorem exercitationem, accusantium temporibus. Illo, eos alias.
+        </section>
+      </FadeInSection>
+
       <img
         className="__about-photo"
         src={aboutPhoto}
         alt="Donnie performing at Comedy Club China"
       />
+
       <section>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
         blanditiis excepturi delectus odio deleniti mollitia illum doloremque

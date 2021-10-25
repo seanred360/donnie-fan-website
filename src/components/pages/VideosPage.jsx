@@ -1,4 +1,5 @@
 import React from "react";
+import FadeInSection from "../common/FadeInSection";
 import VideoPreviewButton from "../VideoPreviewButton";
 
 const VideosPage = () => {

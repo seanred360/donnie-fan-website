@@ -4,6 +4,7 @@ import eventPoster from "../../images/donnie-fan-headliner.jpg";
 import eventPoster2 from "../../images/comic-league.png";
 import eventPoster3 from "../../images/kunming-poster.jpg";
 import eventPoster4 from "../../images/joe-wong-poster.jpg";
+import FadeInSection from "../common/FadeInSection";
 
 const EventsCalendar = () => {
   return (
@@ -12,6 +13,7 @@ const EventsCalendar = () => {
         <h1 className="__header">Event Calendar</h1>
         <p className="__label">Come see me live</p>
       </div>
+
       <Event
         date="Jun 8"
         cityName="Shanghai"

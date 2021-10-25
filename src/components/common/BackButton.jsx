@@ -10,9 +10,9 @@ const BackButton = () => {
   };
 
   return (
-    <button className="all-buttons --back-button" onClick={goBack}>
+    <button className="--back-button" onClick={goBack}>
       <GoChevronLeft />
-      Go Back
+      go back
     </button>
   );
 };

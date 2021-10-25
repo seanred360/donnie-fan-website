@@ -1,9 +1,10 @@
-import React from "react";
+import { Fragment } from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
+import FadeInSection from "./common/FadeInSection";
 
 const Event = ({ date, cityName, eventTimeLocation, eventPoster }) => {
   return (
-    <React.Fragment>
+    <Fragment>
       <div className="event">
         <div className="__calendar">
           <AiOutlineCalendar className="--calendar-icon" />
@@ -15,12 +16,14 @@ const Event = ({ date, cityName, eventTimeLocation, eventPoster }) => {
         </div>
       </div>
 
-      <img
-        className="__event-poster"
-        src={eventPoster}
-        alt="a poster advertising the event"
-      />
-    </React.Fragment>
+      <FadeInSection>
+        <img
+          className="__event-poster"
+          src={eventPoster}
+          alt="a poster advertising the event"
+        />
+      </FadeInSection>
+    </Fragment>
   );
 };
 

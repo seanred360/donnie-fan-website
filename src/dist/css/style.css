@@ -356,7 +356,7 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
   background-image: url("../../images/pic.jpeg");
   border-radius: 50%;
   object-fit: cover;
-  object-position: 100% 0;
+  object-position: 55% 0;
   margin-bottom: 36px;
 }
 

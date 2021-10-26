@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import donnieAtWindyCity from "../../images/pic.jpeg";
+// import donnieAtWindyCity from "../../images/pic.jpeg";
+// import jokePreview from "../../images/joke-preview.gif";
+import tellingJokesPreview from "../../images/telling-jokes-preview.mp4";
+import profilePreview from "../../images/profile-preview.mp4";
 import SocialMediaButtons from "../common/SocialMediaButtons";
 import VideoPreviewButton from "../VideoPreviewButton";
 import SocialMediaFeed from "../common/SocialMediaFeed";
@@ -18,17 +21,23 @@ class HomePage extends Component {
         </div>
 
         <div className="hero-image-wrapper flex flex-ai-c flex-jc-c">
-          <img
+          {/* <img
             className="hero-image"
-            src={donnieAtWindyCity}
+            src={jokePreview}
             alt="Donnie performing at Windy City Comedy Club"
-          />
+          /> */}
+          <video className="hero-image" autoPlay loop muted>
+            <source src={tellingJokesPreview} type="video/mp4" />
+          </video>
         </div>
 
         <SocialMediaButtons />
 
         <FadeInSection>
-          <VideoPreviewButton label="WATCH MY COMEDY" />
+          <VideoPreviewButton
+            label="WATCH MY COMEDY"
+            linkAddress="https://weibo.com/u/7708697903?tabtype=feed"
+          />
         </FadeInSection>
 
         <SocialMediaFeed />

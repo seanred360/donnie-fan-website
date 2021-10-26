@@ -54,49 +54,32 @@ body {
     cursor: pointer;
     background: none;
   }
-}
 
-.container {
-  margin: 0px 1rem;
-  max-width: 1400px;
+  .--back-button {
+    margin-bottom: 1.5rem;
+    padding: 0.375rem 1.5rem;
+    border: none;
+    text-align: left;
+    box-shadow: 0px 0px 0.4375rem rgba(0, 0, 0, 0.293139);
+    border-radius: 0.125rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
 
-  @include respond-above(lg) {
-    margin: auto;
-  }
-}
-
-// Flexbox
-.flex {
-  display: flex;
-
-  &-jc-sb {
-    justify-content: space-between;
+    color: $black;
+    background: $yellow;
   }
 
-  &-jc-c {
-    justify-content: center;
-  }
-
-  &-ai-c {
-    align-items: center;
-  }
-}
-
-Link {
-  text-decoration: none;
-
-  &:focus,
-  &:hover,
-  &:visited,
-  &:link,
-  &:active {
+  Link {
     text-decoration: none;
-  }
-}
 
-.page-wrapper {
-  max-width: 1440px;
-  margin: 24px 36px;
+    &:focus,
+    &:hover,
+    &:visited,
+    &:link,
+    &:active {
+      text-decoration: none;
+    }
+  }
 }
 
 .section-header-group {
@@ -116,10 +99,41 @@ Link {
   }
 }
 
+.App {
+  // this is to make the footer stay at the bottom of the page
+  // sometimes if there is not enough content the footer will move up
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper {
+  max-width: 1440px;
+  margin: 24px 36px;
+  margin-bottom: 200px;
+}
+
 .footer {
   width: 100vw;
   height: 200px;
+  margin-bottom: 0px;
   background-image: url("../../images/yellow-wavy-footer.png");
+}
+
+// Flexbox
+.flex {
+  display: flex;
+
+  &-jc-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
 }
 
 .fade-in-section {
@@ -146,18 +160,4 @@ Link {
   opacity: 1;
   transform: none;
   visibility: visible;
-}
-
-.--back-button {
-  margin-bottom: 1.5rem;
-  padding: 0.375rem 1.5rem;
-  border: none;
-  text-align: left;
-  box-shadow: 0px 0px 0.4375rem rgba(0, 0, 0, 0.293139);
-  border-radius: 0.125rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
-
-  color: $black;
-  background: $yellow;
 }

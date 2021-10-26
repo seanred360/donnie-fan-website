@@ -9,8 +9,8 @@ const FadeInSection = (props) => {
     const domRefCurrent = domRef.current; // fixes lint error
     const options = {
       root: null,
-      threshhold: 0.25,
-      rootMargin: "0px 0px -72px 0px",
+      threshhold: 0,
+      rootMargin: "0px 0px 0px 0px",
     };
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -22,7 +22,7 @@ const FadeInSection = (props) => {
     observer.observe(domRefCurrent);
     return () => observer.unobserve(domRefCurrent);
   }, []);
-  if (animationDirection != undefined)
+  if (animationDirection !== undefined)
     return (
       <div
         className={`fade-in-section${animationDirection} ${

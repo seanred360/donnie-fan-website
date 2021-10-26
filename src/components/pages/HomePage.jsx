@@ -3,7 +3,7 @@ import donnieAtWindyCity from "../../images/pic.jpeg";
 import SocialMediaButtons from "../common/SocialMediaButtons";
 import VideoPreviewButton from "../VideoPreviewButton";
 import SocialMediaFeed from "../common/SocialMediaFeed";
-import ContactForm from "../common/ContactForm";
+import Contact from "../common/Contact";
 import FadeInSection from "../common/FadeInSection";
 
 class HomePage extends Component {
@@ -33,7 +33,7 @@ class HomePage extends Component {
 
         <SocialMediaFeed />
 
-        <ContactForm />
+        <Contact />
       </div>
     );
   }

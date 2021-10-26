@@ -4,7 +4,6 @@ import eventPoster from "../../images/donnie-fan-headliner.jpg";
 import eventPoster2 from "../../images/comic-league.png";
 import eventPoster3 from "../../images/kunming-poster.jpg";
 import eventPoster4 from "../../images/joe-wong-poster.jpg";
-import FadeInSection from "../common/FadeInSection";
 
 const EventsCalendar = () => {
   return (

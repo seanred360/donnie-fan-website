@@ -56,44 +56,25 @@ body button {
   background: none;
 }
 
-.container {
-  margin: 0px 1rem;
-  max-width: 1400px;
+body .--back-button {
+  margin-bottom: 1.5rem;
+  padding: 0.375rem 1.5rem;
+  border: none;
+  text-align: left;
+  box-shadow: 0px 0px 0.4375rem rgba(0, 0, 0, 0.293139);
+  border-radius: 0.125rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: black;
+  background: #f4c203;
 }
 
-@media (min-width: 992px) {
-  .container {
-    margin: auto;
-  }
-}
-
-.flex {
-  display: flex;
-}
-
-.flex-jc-sb {
-  justify-content: space-between;
-}
-
-.flex-jc-c {
-  justify-content: center;
-}
-
-.flex-ai-c {
-  align-items: center;
-}
-
-Link {
+body Link {
   text-decoration: none;
 }
 
-Link:focus, Link:hover, Link:visited, Link:link, Link:active {
+body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:active {
   text-decoration: none;
-}
-
-.page-wrapper {
-  max-width: 1440px;
-  margin: 24px 36px;
 }
 
 .section-header-group {
@@ -113,10 +94,38 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   line-height: 16px;
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper {
+  max-width: 1440px;
+  margin: 24px 36px;
+  margin-bottom: 200px;
+}
+
 .footer {
   width: 100vw;
   height: 200px;
+  margin-bottom: 0px;
   background-image: url("../../images/yellow-wavy-footer.png");
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-ai-c {
+  align-items: center;
 }
 
 .fade-in-section {
@@ -145,19 +154,6 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   opacity: 1;
   transform: none;
   visibility: visible;
-}
-
-.--back-button {
-  margin-bottom: 1.5rem;
-  padding: 0.375rem 1.5rem;
-  border: none;
-  text-align: left;
-  box-shadow: 0px 0px 0.4375rem rgba(0, 0, 0, 0.293139);
-  border-radius: 0.125rem;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  color: black;
-  background: #f4c203;
 }
 
 .nav-bar__container {
@@ -412,18 +408,22 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   margin-bottom: 36px;
 }
 
-.contact-form .contact-options {
+.contact {
+  scroll-padding-top: -360px;
+}
+
+.contact .contact-options {
   flex-direction: column;
 }
 
-.contact-form .contact-options .__contact-option {
+.contact .contact-options .__contact-option {
   display: grid;
   grid-template-columns: auto auto;
   margin-right: auto;
   margin-bottom: 36px;
 }
 
-.contact-form .contact-options .__contact-option .__circle-button {
+.contact .contact-options .__contact-option .__circle-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -437,7 +437,7 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   filter: drop-shadow(4px 4px 4px #f4c203);
 }
 
-.contact-form .contact-options .__contact-option .--label {
+.contact .contact-options .__contact-option .--label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -447,23 +447,23 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   font-size: 1.5rem;
 }
 
-.contact-form .__contact-form * {
+.contact .__contact-form * {
   margin-bottom: 12px;
 }
 
-.contact-form .__contact-form .--option-input {
+.contact .__contact-form .--option-input {
   display: none;
 }
 
-.contact-form .__contact-form .--name-input,
-.contact-form .__contact-form .--email-input {
+.contact .__contact-form .--name-input,
+.contact .__contact-form .--email-input {
   width: 100%;
   height: 50px;
   padding-left: 1rem;
   font-family: "MuseoModerno", cursive;
 }
 
-.contact-form .__contact-form .--message-input {
+.contact .__contact-form .--message-input {
   width: 100%;
   height: 204px;
   padding: 1rem;
@@ -471,7 +471,7 @@ Link:focus, Link:hover, Link:visited, Link:link, Link:active {
   resize: none;
 }
 
-.contact-form .__contact-form .--send-message {
+.contact .__contact-form .--send-message {
   width: 200px;
   height: 50px;
   margin-left: auto;

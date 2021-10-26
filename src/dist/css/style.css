@@ -393,6 +393,7 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
   font-weight: 900;
   font-size: 36px;
   line-height: 40px;
+  color: #ffffff;
 }
 
 .video-preview-button .__video {
@@ -403,7 +404,7 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
 
 .social-media-feed .__social-window {
   width: 300px;
-  height: 350px;
+  height: 400px;
   background: #ffffff;
   margin-bottom: 36px;
 }

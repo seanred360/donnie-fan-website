@@ -1,5 +1,6 @@
 import React from "react";
 import FadeInSection from "./FadeInSection";
+import { Timeline } from "react-twitter-widgets";
 
 const SocialMediaFeed = () => {
   return (
@@ -11,7 +12,17 @@ const SocialMediaFeed = () => {
         </FadeInSection>
       </div>
       <FadeInSection>
-        <div className="__social-window"></div>
+        <div className="__social-window">
+          <Timeline
+            dataSource={{
+              sourceType: "profile",
+              screenName: "markhoppus",
+            }}
+            options={{
+              height: "400",
+            }}
+          />
+        </div>
       </FadeInSection>
     </div>
   );

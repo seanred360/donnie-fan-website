@@ -3,7 +3,7 @@ import Main from "./components/Main";
 import NavBar from "./components/common/navbar/NavBar";
 import Footer from "./components/common/Footer";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <NavBar />
@@ -13,6 +13,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

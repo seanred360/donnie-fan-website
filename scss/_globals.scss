@@ -143,7 +143,7 @@ body {
 }
 
 .hide-for-desktop {
-  @include respond-above(md) {
+  @include respond-above(lg) {
     display: none;
   }
 }

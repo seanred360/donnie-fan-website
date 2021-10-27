@@ -1,4 +1,3 @@
-import React from "react";
 import { useHistory } from "react-router-dom";
 
 const Navigationbutton = ({ label, onOpen }) => {
@@ -6,7 +5,7 @@ const Navigationbutton = ({ label, onOpen }) => {
 
   function handleClick() {
     history.push(`/${label}`.toLocaleLowerCase());
-    onOpen()
+    onOpen(false);
   }
   return (
     <button className="navigation-button" onClick={handleClick}>

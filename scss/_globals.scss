@@ -136,6 +136,18 @@ body {
   }
 }
 
+.hide-for-mobile {
+  @include respond-below(md) {
+    display: none;
+  }
+}
+
+.hide-for-desktop {
+  @include respond-above(md) {
+    display: none;
+  }
+}
+
 .fade-in-section {
   opacity: 0;
   transform: translateY(20vh);

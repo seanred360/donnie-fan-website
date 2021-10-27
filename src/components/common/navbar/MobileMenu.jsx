@@ -1,9 +1,9 @@
-import React from "react";
-import Navigationbutton from "./common/NavigationButton";
+import { Fragment } from "react";
+import Navigationbutton from "./NavigationButton";
 
 const MobileMenu = ({ isOpen, onOpen }) => {
   return (
-    <React.Fragment>
+    <Fragment>
       <div className={`fade-overlay ${isOpen ? `--open` : ``}`}></div>
       <div className={`mobile-menu-container ${isOpen ? `--open` : ``}`}>
         <div className="__mobile-menu">
@@ -14,7 +14,7 @@ const MobileMenu = ({ isOpen, onOpen }) => {
           <Navigationbutton onOpen={onOpen} label="Contact" />
         </div>
       </div>
-    </React.Fragment>
+    </Fragment>
   );
 };
 

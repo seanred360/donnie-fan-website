@@ -36,7 +36,7 @@ class HomePage extends Component {
         <FadeInSection>
           <VideoPreviewButton
             label="WATCH MY COMEDY"
-            linkAddress="https://weibo.com/u/7708697903?tabtype=feed"
+            linkAddress="https://weibo.com/u/7708697903?tabtype=newVideo"
           />
         </FadeInSection>
 

@@ -1,13 +1,6 @@
-import React, { useState } from "react";
 import ReactAnime from "react-animejs";
 
-const HamburgerButton = ({ onOpen }) => {
-  const [open, setOpen] = useState(false);
-  const openMenu = () => {
-    setOpen(!open);
-    onOpen();
-  };
-
+const HamburgerButton = ({ isOpen, onOpen }) => {
   const { Anime, stagger } = ReactAnime;
 
   return (
@@ -22,8 +15,12 @@ const HamburgerButton = ({ onOpen }) => {
       ]}
     >
       <div
-        className={open ? "hamburger-button open" : "hamburger-button"}
-        onClick={openMenu}
+        className={
+          isOpen
+            ? "hamburger-button hide-for-desktop open"
+            : "hamburger-button hide-for-desktop"
+        }
+        onClick={() => onOpen(!isOpen)}
       >
         <svg width="35" height="35" viewBox="0 0 100 100">
           <path

@@ -1,18 +1,38 @@
 .video-preview-button {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 200px;
   margin-bottom: 36px;
   padding: 0;
 
+  @include respond-above(lg) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 66.67vh;
+  }
+
   .__video-label {
     position: absolute;
     top: 30%;
+    right: 0;
+    left: 0;
+    padding: 0px 4rem;
     margin: 0;
     font-weight: 900;
-    font-size: 36px;
+    @include font-size(24);
     line-height: 40px;
     color: $white;
+    background: rgba(0, 0, 0, 0.5);
+
+    @include respond-above(lg) {
+      padding: 0px 4rem;
+      letter-spacing: 0.1em;
+      font-weight: 900;
+      @include font-size(50);
+      @include line-height(158);
+      color: $white;
+    }
   }
 
   .__video {

@@ -1,15 +1,17 @@
 import React from "react";
-import FadeInSection from "./FadeInSection";
+import FadeInSection from "../utility/FadeInSection";
 
 const ContactForm = ({ selectedReason, sendEmail }) => {
   return (
     <div className="contact">
       <FadeInSection>
-        <div className="section-header-group">
-          <h3 className="__header">Let's meet</h3>
-          <p className="__label">
-            Send me a message so we can start a conversation
-          </p>
+        <div className="section-header-style-wrapper">
+          <div className="section-header-group">
+            <h3 className="__header">Let's meet</h3>
+            <p className="__label">
+              Send me a message so we can start a conversation
+            </p>
+          </div>
         </div>
         <form className="__contact-form" onSubmit={sendEmail}>
           <input

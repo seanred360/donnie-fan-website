@@ -77,6 +77,13 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
   text-decoration: none;
 }
 
+.section-header-style-wrapper {
+  display: flex;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .section-header-group {
   border-left: 6px solid #f4c203;
   padding-left: 10px;
@@ -374,25 +381,25 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
   flex-direction: column;
 }
 
-.home-page .header {
+.home-page .__header {
   line-height: 60px;
-  text-align: center;
+  text-align: left;
 }
 
-.home-page .header p {
+.home-page .__header p {
   font-size: 1.5rem;
   font-weight: 200;
   margin: 0;
 }
 
-.home-page .header h1 {
+.home-page .__header h1 {
   font-size: 3rem;
   font-weight: 700;
   margin: 0;
   margin-bottom: 36px;
 }
 
-.home-page .hero-image {
+.home-page .--hero-image {
   width: 300px;
   height: 300px;
   background-image: url("../../images/pic.jpeg");
@@ -402,7 +409,81 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
   margin-bottom: 36px;
 }
 
+@media (min-width: 992px) {
+  .__top-elements {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: auto;
+  }
+  .__top-elements .__left-elements {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+  }
+  .__top-elements .__left-elements .__header {
+    text-align: left;
+  }
+  .__top-elements .__left-elements .__header p {
+    font-size: 2.25rem;
+  }
+  .__top-elements .__left-elements .__header h1 {
+    font-size: 6rem;
+    line-height: 112px;
+  }
+  .__top-elements .__left-elements .__header .__book-me-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  .__top-elements .__left-elements .__header .__book-me-group .navigation-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    height: 50px;
+    margin-right: 52px;
+    padding: 0px 1rem;
+    background: #f4c203;
+    font-family: "MuseoModerno", cursive;
+    font-size: 1.5rem;
+    color: black;
+  }
+  .__top-elements .__social-media-group .--social-media-label {
+    font-size: 1.5rem;
+  }
+  .__top-elements .__social-media-group .social-media-buttons {
+    justify-content: start;
+    margin-bottom: 36px;
+  }
+  .__top-elements .__social-media-group .social-media-buttons .__circle-button {
+    width: 65px;
+    height: 65px;
+    margin: none;
+    margin-right: 1rem;
+    font-size: 4.0625rem;
+  }
+  .__top-elements .__right-elements {
+    margin-left: auto;
+  }
+  .__top-elements .__right-elements .--hero-image {
+    width: 600px;
+    height: 600px;
+    background-image: url("../../images/pic.jpeg");
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 55% 0;
+    margin-bottom: 100px;
+  }
+  .social-media-feed {
+    display: none;
+  }
+}
+
 .social-media-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
   margin-bottom: 36px;
 }
 
@@ -410,32 +491,55 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
   width: 45px;
   height: 45px;
   margin-left: 6px;
   font-size: 2.8125rem;
-  color: black;
-  background: #ffffff;
-  border-radius: 50%;
-  filter: drop-shadow(4px 4px 4px #f4c203);
+  color: #f4c203;
+  border: 1px solid yellow;
 }
 
 .video-preview-button {
   position: relative;
-  width: 100%;
+  width: 100vw;
   height: 200px;
   margin-bottom: 36px;
   padding: 0;
 }
 
+@media (min-width: 992px) {
+  .video-preview-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 66.67vh;
+  }
+}
+
 .video-preview-button .__video-label {
   position: absolute;
   top: 30%;
+  right: 0;
+  left: 0;
+  padding: 0px 4rem;
   margin: 0;
   font-weight: 900;
-  font-size: 36px;
+  font-size: 1.5rem;
   line-height: 40px;
   color: #ffffff;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 992px) {
+  .video-preview-button .__video-label {
+    padding: 0px 4rem;
+    letter-spacing: 0.1em;
+    font-weight: 900;
+    font-size: 3.125rem;
+    line-height: 9.875rem;
+    color: #ffffff;
+  }
 }
 
 .video-preview-button .__video {
@@ -451,12 +555,33 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
   margin-bottom: 36px;
 }
 
-.contact {
-  scroll-padding-top: -360px;
+@media (min-width: 768px) {
+  .social-media-feed .__social-window {
+    width: 55vw;
+  }
 }
 
 .contact .contact-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  .contact .contact-options {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    width: 600px;
+    height: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid #f4c203;
+  }
 }
 
 .contact .contact-options .__contact-option {
@@ -464,6 +589,16 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
   grid-template-columns: auto auto;
   margin-right: auto;
   margin-bottom: 36px;
+}
+
+@media (min-width: 992px) {
+  .contact .contact-options .__contact-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+  }
 }
 
 .contact .contact-options .__contact-option .__circle-button {
@@ -475,9 +610,21 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
   margin-left: 6px;
   font-size: 3.875rem;
   color: black;
-  background: #ffffff;
-  border-radius: 50%;
-  filter: drop-shadow(4px 4px 4px #f4c203);
+  background: #f4c203;
+}
+
+@media (min-width: 992px) {
+  .contact .contact-options .__contact-option .__circle-button {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 0.8rem;
+    font-size: 6.25rem;
+  }
+  .contact .contact-options .__contact-option .__circle-button:hover {
+    font-size: 6.875rem;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+  }
 }
 
 .contact .contact-options .__contact-option .--label {
@@ -490,8 +637,37 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
   font-size: 1.5rem;
 }
 
+@media (min-width: 992px) {
+  .contact .contact-options .__contact-option .--label {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+
+.contact .__contact-form {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 1rem;
+  border: 2px solid #f4c203;
+  text-align: left;
+}
+
 .contact .__contact-form * {
   margin-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+  .contact .__contact-form {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "name text-area" "email text-area" "submit text-area";
+    width: 600px;
+  }
 }
 
 .contact .__contact-form .--option-input {
@@ -506,24 +682,34 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
   font-family: "MuseoModerno", cursive;
 }
 
+.contact .__contact-form .--name-input {
+  grid-area: name;
+}
+
+.contact .__contact-form .--email-input {
+  grid-area: email;
+}
+
 .contact .__contact-form .--message-input {
   width: 100%;
   height: 204px;
   padding: 1rem;
   font-family: "MuseoModerno", cursive;
   resize: none;
+  grid-area: text-area;
 }
 
 .contact .__contact-form .--send-message {
   width: 200px;
   height: 50px;
-  margin-left: auto;
+  justify-content: left;
   margin-right: auto;
   background: #f4c203;
   font-family: "MuseoModerno", cursive;
   font-size: 1.5rem;
   border: none;
   outline: none;
+  grid-area: submit;
 }
 
 .about-page .__about-photo {

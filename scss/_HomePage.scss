@@ -1,8 +1,9 @@
 .home-page {
   flex-direction: column;
-  .header {
+
+  .__header {
     line-height: 60px;
-    text-align: center;
+    text-align: left;
     p {
       @include font-size(24);
       font-weight: 200;
@@ -16,7 +17,7 @@
     }
   }
 
-  .hero-image {
+  .--hero-image {
     width: 300px;
     height: 300px;
     background-image: url("../../images/pic.jpeg");
@@ -24,5 +25,84 @@
     object-fit: cover;
     object-position: 55% 0;
     margin-bottom: 36px;
+  }
+}
+
+// desktop version
+@include respond-above(lg) {
+  .__top-elements {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: auto;
+
+    .__left-elements {
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-right: auto;
+      .__header {
+        text-align: left;
+        p {
+          @include font-size(36);
+        }
+        h1 {
+          @include font-size(96);
+          line-height: 112px;
+        }
+
+        .__book-me-group {
+          display: flex;
+          align-items: center;
+          margin-bottom: 100px;
+
+          .navigation-button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 200px;
+            height: 50px;
+            margin-right: 52px;
+            padding: 0px 1rem;
+            background: $yellow;
+            font-family: "MuseoModerno", cursive;
+            @include font-size(24);
+            color: $black;
+          }
+        }
+      }
+    }
+
+    .__social-media-group {
+      .--social-media-label {
+        @include font-size(24);
+      }
+      .social-media-buttons {
+        justify-content: start;
+        margin-bottom: 36px;
+        .__circle-button {
+          width: 65px;
+          height: 65px;
+          margin: none;
+          margin-right: 1rem;
+          @include font-size(65);
+        }
+      }
+    }
+
+    .__right-elements {
+      margin-left: auto;
+      .--hero-image {
+        width: 600px;
+        height: 600px;
+        background-image: url("../../images/pic.jpeg");
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: 55% 0;
+        margin-bottom: 100px;
+      }
+    }
+  }
+
+  .social-media-feed {
+    display: none;
   }
 }

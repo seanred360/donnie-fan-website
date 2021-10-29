@@ -4,5 +4,9 @@
     height: 400px;
     background: $white;
     margin-bottom: 36px;
+
+    @include respond-above(md) {
+      width: 55vw;
+    }
   }
 }

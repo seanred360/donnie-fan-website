@@ -1,6 +1,7 @@
 import React from "react";
-import djTalking from "../images/djTalking.jpeg";
-import FadeInSection from "./common/FadeInSection";
+// import djTalking from "../images/djTalking.jpeg";
+import donnieRooftop from "../images/donnie-rooftop.jpg";
+import FadeInSection from "../components/utility/FadeInSection";
 
 const VideoPreviewButton = ({ label, linkAddress }) => {
   return (
@@ -10,7 +11,7 @@ const VideoPreviewButton = ({ label, linkAddress }) => {
         onClick={() => window.open(linkAddress)}
       >
         <h2 className="__video-label">{label}</h2>
-        <img className="__video" src={djTalking} alt="Donnie performing" />
+        <img className="__video" src={donnieRooftop} alt="Donnie performing" />
       </button>
     </FadeInSection>
   );

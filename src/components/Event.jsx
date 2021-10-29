@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { AiOutlineCalendar } from "react-icons/ai";
-import FadeInSection from "./common/FadeInSection";
+import FadeInSection from "../components/utility/FadeInSection";
 
 const Event = ({ date, cityName, eventTimeLocation, eventPoster }) => {
   return (

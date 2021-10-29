@@ -82,6 +82,13 @@ body {
   }
 }
 
+.section-header-style-wrapper {
+  display: flex;
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .section-header-group {
   border-left: 6px solid $yellow;
   padding-left: 10px;

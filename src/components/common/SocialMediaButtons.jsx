@@ -6,7 +6,7 @@ import { AiFillYoutube } from "react-icons/ai";
 
 const SocialMediaButtons = () => {
   return (
-    <div className="social-media-buttons flex flex-ai-c flex-jc-c">
+    <div className="social-media-buttons">
       <button className="__circle-button">
         <FaWeibo />
       </button>

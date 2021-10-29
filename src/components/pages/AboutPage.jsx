@@ -1,6 +1,6 @@
 import React from "react";
 import aboutPhoto from "../../images/donnie-at-comedy-club-china.jpg";
-import FadeInSection from "../common/FadeInSection";
+import FadeInSection from "../utility/FadeInSection";
 
 const AboutPage = () => {
   return (

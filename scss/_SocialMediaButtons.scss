@@ -1,16 +1,23 @@
 .social-media-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
   margin-bottom: 36px;
+
   .__circle-button {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
     width: 45px;
     height: 45px;
     margin-left: 6px;
     @include font-size(45);
-    color: $black;
-    background: $white;
-    border-radius: 50%;
-    filter: drop-shadow(4px 4px 4px #f4c203);
+    color: $yellow;
+    border: 1px solid yellow;
+    // background: $yellow;
+    // border-radius: 50%;
+    // filter: drop-shadow(4px 4px 4px #f4c203);
   }
 }

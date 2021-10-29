@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 import ContactOptions from "./ContactOptions";
 import ContactForm from "./ContactForm";
-import FadeInSection from "./FadeInSection";
+import FadeInSection from "../utility/FadeInSection";
 
 const Contact = (props) => {
   const contactForm = useRef();

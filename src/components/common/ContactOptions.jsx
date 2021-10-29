@@ -1,20 +1,23 @@
-import FadeInSection from "./FadeInSection";
+import FadeInSection from "../utility/FadeInSection";
 import { GiMicrophone } from "react-icons/gi";
 import { FaHandshake } from "react-icons/fa";
-import { BsBookHalf } from "react-icons/bs";
+// import { BsBookHalf } from "react-icons/bs";
 import { FaNewspaper } from "react-icons/fa";
 import { MdWavingHand } from "react-icons/md";
 
 const ContactOptions = ({ setSelectedReason }) => {
   return (
     <div className="contact">
-      <div className="section-header-group">
-        <h3 className="__header">Let's Chat</h3>
-        <FadeInSection>
-          <p className="__label">How can I help?</p>
-        </FadeInSection>
+      <div className="section-header-style-wrapper">
+        <div className="section-header-group">
+          <h3 className="__header">Let's Chat</h3>
+          <FadeInSection>
+            <p className="__label">How can I help?</p>
+          </FadeInSection>
+        </div>
       </div>
-      <div className="contact-options flex flex-ai-c flex-jc-c">
+
+      <div className="contact-options">
         <div className="__contact-option">
           <button
             className="__circle-button"
@@ -35,7 +38,7 @@ const ContactOptions = ({ setSelectedReason }) => {
           <p className="--label">I have a business opportunity</p>
         </div>
 
-        <div className="__contact-option">
+        {/* <div className="__contact-option">
           <button
             className="__circle-button"
             onClick={() => setSelectedReason("I am a publisher")}
@@ -43,7 +46,7 @@ const ContactOptions = ({ setSelectedReason }) => {
             <BsBookHalf />
           </button>
           <p className="--label">I am a publisher</p>
-        </div>
+        </div> */}
 
         <div className="__contact-option">
           <button

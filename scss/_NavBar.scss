@@ -9,57 +9,93 @@
       $black 53.09%,
       $black 100%
     );
-    @include font-size(24);
+    @include font-size(16);
     color: $white;
-    border: 3px solid $yellow;
+    border-bottom: 2px solid $yellow;
 
     @include respond-above(lg) {
       height: 140px;
-      padding: 40px 40px;
       background: radial-gradient(
         128.88% 128.88% at 103.9% -10.39%,
         $black 0%,
         $black 53.09%,
         $black 100%
       );
+      @include font-size(24);
       color: $white;
       border: none;
     }
 
     .__left-content {
-      .__logo {
-        width: 60px;
-        height: 60px;
-        margin-right: 40px;
+      .__logo-link {
+        width: 30px;
+        height: 30px;
+        margin-right: 1.5rem;
         background: $yellow;
-        @include font-size(24);
         color: $black;
+        cursor: pointer;
+
+        &:hover {
+          border: 2px solid $white;
+        }
+
+        @include respond-above(lg) {
+          width: 60px;
+          height: 60px;
+          margin-right: 40px;
+          background: $yellow;
+          @include font-size(24);
+          color: $black;
+        }
       }
 
-      .__language {
-        .--language-button {
-          @include font-size(24);
+      .__website-name {
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+
+    .__language {
+      margin-right: auto;
+      @include font-size(16);
+
+      @include respond-above(lg) {
+        margin-right: 0;
+        margin-left: 2.5rem;
+        border: 2px solid $yellow;
+      }
+
+      .--language-button {
+        display: inline;
+        color: $white;
+        text-align: left;
+        @include font-size(16);
+        font-weight: 300;
+        border-bottom: 2px solid $black;
+        transition: border 0.3s ease;
+
+        &:hover {
+          // border-bottom: 2px solid $yellow;
+          color: $yellow;
         }
       }
     }
 
     .__nav-links {
-      margin-right: auto;
+      margin-left: auto;
 
-      .navigation-button {
+      .--navigation-button {
+        display: inline;
         color: $white;
         text-align: left;
         @include font-size(24);
         font-weight: 300;
+        border-bottom: 2px solid $black;
+        transition: border 0.3s ease;
 
-        // &::before {
-        //   display: inline-block;
-        //   content: "";
-        //   width: 6px;
-        //   height: 46px;
-        //   margin-right: 13px;
-        //   background: $yellow;
-        // }
+        &:hover {
+          border-bottom: 2px solid $yellow;
+        }
       }
     }
   }

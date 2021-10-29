@@ -8,7 +8,7 @@ const HamburgerButton = ({ isOpen, onOpen }) => {
       type="button"
       _onClick={[
         {
-          targets: ".navigation-button",
+          targets: ".--navigation-button",
           translateX: [270, 0],
           delay: stagger(50),
         },

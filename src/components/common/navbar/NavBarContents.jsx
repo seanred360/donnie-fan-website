@@ -1,4 +1,5 @@
 import useViewport from "../../utility/useViewport";
+import LogoLink from "../LogoLink";
 import HamburgerButton from "./HamburgerButton";
 import Navigationbutton from "./NavigationButton";
 
@@ -9,23 +10,32 @@ const NavBarContents = ({ isOpen, onOpen }) => {
   return width < breakpoint ? (
     <div className="nav-bar-contents flex flex-jc-sb flex-ai-c">
       <div className="__left-content flex">
-        <span className="__language">
-          <button className="--language-button">English</button> |{" "}
-          <button className="--language-button">中文</button>
-        </span>
+        <LogoLink />
       </div>
+
+      <div className="__left-content flex"></div>
+      <div className="__language">
+        <button className="--english-button --language-button">En</button>|
+        <button className="--chinese-button --language-button">中文</button>
+      </div>
+
       <HamburgerButton isOpen={isOpen} onOpen={onOpen} />
     </div>
   ) : (
     <div className="nav-bar-contents flex flex-jc-sb flex-ai-c">
       <div className="__left-content flex">
-        <div className="__logo flex flex-ai-c flex-jc-c">DF</div>
+        <LogoLink />
+        <div className="__website-name">Donnie Fan Comedy</div>
       </div>
       <div className="__nav-links">
         <Navigationbutton label="About" />
         <Navigationbutton label="Events" />
         <Navigationbutton label="Videos" />
         <Navigationbutton label="Contact" />
+      </div>
+      <div className="__language">
+        <button className="--english-button --language-button">En</button>|
+        <button className="--chinese-button --language-button">中文</button>
       </div>
     </div>
   );

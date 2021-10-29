@@ -10,7 +10,7 @@ const Navigationbutton = ({ label, icon, onOpen }) => {
     }
   }
   return (
-    <button className="navigation-button" onClick={handleClick}>
+    <button className="--navigation-button" onClick={handleClick}>
       {label}
       {icon}
     </button>

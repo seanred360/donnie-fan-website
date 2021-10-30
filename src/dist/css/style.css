@@ -761,11 +761,53 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
   grid-area: submit;
 }
 
-.about-page .__about-photo {
+.about-page {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  .about-page {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 80px;
+    font-size: 24px;
+    line-height: 40px;
+  }
+}
+
+.about-page .__right-content {
+  max-width: 600px;
+}
+
+@media (min-width: 992px) {
+  .about-page .__right-content {
+    margin-top: 138px;
+  }
+}
+
+.about-page .__right-content .section-header-group {
+  font-size: 72px;
+  line-height: 107px;
+  letter-spacing: 0.05em;
+}
+
+.about-page .__left-content {
+  max-width: 600px;
+}
+
+.about-page .__left-content .__about-photo {
   width: 309px;
   height: 251px;
   object-fit: cover;
   margin: 36px 0px;
+}
+
+@media (min-width: 992px) {
+  .about-page .__left-content .__about-photo {
+    width: 100%;
+    height: 350px;
+  }
 }
 
 .events-calendar .event {

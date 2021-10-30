@@ -11,11 +11,11 @@ const MobileMenu = ({ isOpen, onOpen }) => {
         }`}
       >
         <div className="__mobile-menu">
-          <Navigationbutton onOpen={onOpen} label="Home" />
-          <Navigationbutton onOpen={onOpen} label="About" />
-          <Navigationbutton onOpen={onOpen} label="Events" />
-          <Navigationbutton onOpen={onOpen} label="Videos" />
-          <Navigationbutton onOpen={onOpen} label="Contact" />
+          <Navigationbutton onOpen={onOpen} url={"home"} label="Home" />
+          <Navigationbutton onOpen={onOpen} url={"about"} label="About" />
+          <Navigationbutton onOpen={onOpen} url={"events"} label="Events" />
+          <Navigationbutton onOpen={onOpen} url={"videos"} label="Videos" />
+          <Navigationbutton onOpen={onOpen} url={"contact"} label="Contact" />
         </div>
       </div>
     </Fragment>

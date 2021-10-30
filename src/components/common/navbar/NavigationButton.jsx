@@ -1,10 +1,10 @@
 import { useHistory } from "react-router-dom";
 
-const Navigationbutton = ({ label, icon, onOpen }) => {
+const Navigationbutton = ({ label, url, icon, onOpen }) => {
   let history = useHistory();
 
   function handleClick() {
-    history.push(`/${label}`.toLocaleLowerCase());
+    history.push(`/${url}`.toLocaleLowerCase());
     if (onOpen) {
       onOpen(false);
     }

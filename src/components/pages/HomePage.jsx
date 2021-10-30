@@ -56,7 +56,11 @@ const HomePage = () => {
               <h1>Donnie Fan!</h1>
             </FadeInSection>
             <div className="__book-me-group">
-              <Navigationbutton label={"Book me"} icon={<GiMicrophone />} />
+              <Navigationbutton
+                label={"Book me"}
+                url={"contact"}
+                icon={<GiMicrophone />}
+              />
             </div>
           </div>
           <div className="__social-media-group">

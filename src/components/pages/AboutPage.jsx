@@ -6,21 +6,23 @@ const AboutPage = () => {
   return (
     <div className="about-page">
       <div className="__left-content">
-        <div className="section-header-group">
-          <h1 className="__header">About me</h1>
-          <p className="__label">Donnie Fan</p>
-        </div>
-        <section className="__section-one">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-          blanditiis excepturi delectus odio deleniti mollitia illum doloremque
-          earum repudiandae sequi illo voluptate officia, quasi debitis odit vel
-          eius,
-        </section>
-        <img
-          className="__about-photo"
-          src={aboutPhoto}
-          alt="Donnie performing at Comedy Club China"
-        />
+        <FadeInSection>
+          <div className="section-header-group">
+            <h1 className="__header">About me</h1>
+            <p className="__label">Donnie Fan</p>
+          </div>
+          <section className="__section-one">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+            blanditiis excepturi delectus odio deleniti mollitia illum
+            doloremque earum repudiandae sequi illo voluptate officia, quasi
+            debitis odit vel eius,
+          </section>
+          <img
+            className="__about-photo"
+            src={aboutPhoto}
+            alt="Donnie performing at Comedy Club China"
+          />
+        </FadeInSection>
       </div>
 
       <div className="__right-content">

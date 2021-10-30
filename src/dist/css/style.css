@@ -810,43 +810,60 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
   }
 }
 
-.events-calendar .event {
+@media (min-width: 576px) {
+  .events-calendar .events-group {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  .events-calendar .events-group {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 24px;
+  }
+}
+
+.events-calendar .event .__top-content {
   display: flex;
+  flex-direction: row;
   justify-content: left;
   align-items: center;
   border-bottom: 4px solid #f4c203;
 }
 
-.events-calendar .event .__calendar {
+.events-calendar .event .__top-content .__calendar {
   position: relative;
 }
 
-.events-calendar .event .__calendar .--calendar-icon {
+.events-calendar .event .__top-content .__calendar .__calendar--icon {
   width: 100px;
   height: 100px;
 }
 
-.events-calendar .event .__calendar .--calendar-label {
+.events-calendar .event .__top-content .__calendar .__calendar--label {
   position: absolute;
   top: 50px;
   left: 22px;
 }
 
-.events-calendar .event .__event-text-group .--city-name {
+.events-calendar .event .event--text-group .__event--city-name {
   margin: 0;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
 }
 
-.events-calendar .event .__event-text-group .--event-time-location {
+.events-calendar .event .event--text-group .__event--time-location {
   margin: 0;
   font-weight: 200;
   font-size: 14px;
   line-height: 24px;
 }
 
-.__event-poster {
+.__event--poster {
   width: 100%;
   height: auto;
   margin-top: 1rem;

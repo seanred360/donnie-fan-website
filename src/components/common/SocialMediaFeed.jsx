@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FadeInSection from "../utility/FadeInSection";
-import { Timeline } from "react-twitter-widgets";
+import useAxios from "../../custom-hooks/useAxios";
 
 const SocialMediaFeed = () => {
+  const [socialMediaData, setSocialMediaData] = useState({});
+
+  const { response, loading, error } = useAxios({
+    method: "get",
+    url: "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frssfeed.today%2Fweibo%2Frss%2F7708697903",
+  });
+
+  useEffect(() => {
+    if (response !== null) {
+      console.log(response);
+      setSocialMediaData(response);
+    }
+  }, [response]);
+
+  if (loading) return <h1>loading</h1>;
+  if (error) return <h1>error</h1>;
   return (
     <div className="social-media-feed">
       <div className="section-header-style-wrapper">
@@ -15,15 +31,39 @@ const SocialMediaFeed = () => {
       </div>
       <FadeInSection>
         <div className="__social-window">
-          <Timeline
-            dataSource={{
-              sourceType: "profile",
-              screenName: "markhoppus",
-            }}
-            options={{
-              height: "400",
-            }}
-          />
+          {socialMediaData["items"].map((post) => (
+            <div key={post["title"]} className="__weibo-post">
+              <div className="__top">
+                <img
+                  src="https://tvax1.sinaimg.cn/crop.0.0.1002.1002.180/008pGUt9ly8gv2ym49cscj60ru0ru0w802.jpg?KID=imgbed,tva&amp;Expires=1640374431&amp;ssig=MpQeHmB1ST"
+                  alt=""
+                  className="__profile-pic"
+                />
+                <span className="__username">
+                  {/* remove these specific Chinese characters in a series 的微博 but allow others. Because they mean 'his weibo' DJ will never name himself this, but may name himself something else in Chinese*/}
+                  {socialMediaData["feed"]["title"].replace(
+                    /[(\u7684\u5fae\u535a)]/g,
+                    ""
+                  )}
+                </span>
+                <span className="__post-date">{post["pubDate"]}</span>
+              </div>
+              <div className="__post-content">
+                <span className="__content-text">
+                  {post["content"]
+                    .replace(/<a\b[^>]*>/gm, "")
+                    .replace(/<\/a>/gm, "")
+                    .replace(/<img\b[^>]*>/gm, "")
+                    .replace(/<\/img>/gm, "")
+                    .replace(/<br\b[^>]*>/gm, "")
+                    .replace(/<\/br>/gm, "")
+                    .replace(/<span\b[^>]*>/gm, "")
+                    .replace(/<\/span>/gm, "")}
+                </span>
+                <img className="__content-thumbnail" src={post["thumbnail"]} />
+              </div>
+            </div>
+          ))}
         </div>
       </FadeInSection>
     </div>

@@ -9,7 +9,6 @@ import SocialMediaFeed from "../common/SocialMediaFeed";
 import Contact from "../common/Contact";
 import FadeInSection from "../utility/FadeInSection";
 import { GiMicrophone } from "react-icons/gi";
-import NavigationButton from "../common/navbar/NavigationButton";
 import Navigationbutton from "../common/navbar/NavigationButton";
 
 const HomePage = () => {

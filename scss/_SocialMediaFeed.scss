@@ -10,7 +10,10 @@
     overflow-y: scroll;
 
     @include respond-above(md) {
-      width: 55vw;
+      width: 600px;
+      height: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .__weibo-post {
@@ -25,9 +28,12 @@
           margin-right: 10px;
           grid-row-start: span 2;
         }
+
         .__username {
           font-weight: 700;
+          color: black;
         }
+
         .__post-date {
           font-size: 12px;
           font-weight: 400;
@@ -47,6 +53,8 @@
         }
 
         .__content-thumbnail {
+          width: 100%;
+          height: 100%;
           border-radius: 15px;
         }
       }

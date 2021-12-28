@@ -523,9 +523,6 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
     object-position: 55% 0;
     margin-bottom: 100px;
   }
-  .social-media-feed {
-    display: none;
-  }
 }
 
 .social-media-buttons {
@@ -613,7 +610,10 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
 
 @media (min-width: 768px) {
   .social-media-feed .__social-window {
-    width: 55vw;
+    width: 600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -632,6 +632,7 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
 
 .social-media-feed .__social-window .__weibo-post .__top .__username {
   font-weight: 700;
+  color: black;
 }
 
 .social-media-feed .__social-window .__weibo-post .__top .__post-date {
@@ -653,6 +654,8 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
 }
 
 .social-media-feed .__social-window .__weibo-post .__post-content .__content-thumbnail {
+  width: 100%;
+  height: 100%;
   border-radius: 15px;
 }
 

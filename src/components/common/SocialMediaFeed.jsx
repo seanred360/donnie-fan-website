@@ -36,16 +36,19 @@ const SocialMediaFeed = () => {
               <div className="__top">
                 <img
                   src="https://tvax1.sinaimg.cn/crop.0.0.1002.1002.180/008pGUt9ly8gv2ym49cscj60ru0ru0w802.jpg?KID=imgbed,tva&amp;Expires=1640374431&amp;ssig=MpQeHmB1ST"
-                  alt=""
+                  alt="Donnie's weibo avatar"
                   className="__profile-pic"
                 />
-                <span className="__username">
+                <a
+                  href="https://weibo.com/u/7708697903?tabtype=feed"
+                  className="__username"
+                >
                   {/* remove these specific Chinese characters in a series 的微博 but allow others. Because they mean 'his weibo' DJ will never name himself this, but may name himself something else in Chinese*/}
                   {socialMediaData["feed"]["title"].replace(
                     /[(\u7684\u5fae\u535a)]/g,
                     ""
                   )}
-                </span>
+                </a>
                 <span className="__post-date">{post["pubDate"]}</span>
               </div>
               <div className="__post-content">
@@ -60,11 +63,13 @@ const SocialMediaFeed = () => {
                     .replace(/<span\b[^>]*>/gm, "")
                     .replace(/<\/span>/gm, "")}
                 </span>
-                <img
-                  className="__content-thumbnail"
-                  src={post["thumbnail"]}
-                  alt={post["title"]}
-                />
+                <a href={post["link"]}>
+                  <img
+                    className="__content-thumbnail"
+                    src={post["thumbnail"]}
+                    alt={post["title"]}
+                  />
+                </a>
               </div>
             </div>
           ))}

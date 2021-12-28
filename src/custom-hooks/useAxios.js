@@ -11,14 +11,7 @@ const useAxios = ({ url, method, body = null, headers = null }) => {
 
   useEffect(() => {
     const fetchData = () => {
-      axios[method](url, JSON.parse(headers), JSON.parse(body), {
-        withCredentials: true,
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Content-Type": "text/plain",
-          "Referer": "",
-        },
-      })
+      axios[method](url, JSON.parse(headers), JSON.parse(body), {})
         .then((res) => {
           setResponse(res.data);
         })

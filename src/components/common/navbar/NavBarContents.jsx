@@ -2,7 +2,6 @@ import useViewport from "../../utility/useViewport";
 import LogoLink from "../LogoLink";
 import HamburgerButton from "./HamburgerButton";
 import Navigationbutton from "./NavigationButton";
-import { Link } from "react-router-dom";
 
 const NavBarContents = ({ isOpen, onOpen }) => {
   const { width } = useViewport();

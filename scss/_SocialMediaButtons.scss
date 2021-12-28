@@ -19,5 +19,10 @@
     // background: $yellow;
     // border-radius: 50%;
     // filter: drop-shadow(4px 4px 4px #f4c203);
+
+    @include respond-above(lg) {
+      width: 60px;
+      height: 60px;
+    }
   }
 }

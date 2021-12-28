@@ -489,7 +489,7 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
     align-items: center;
     justify-content: space-between;
     width: 200px;
-    height: 50px;
+    height: 60px;
     margin-right: 52px;
     padding: 0px 1rem;
     background: #f4c203;
@@ -544,6 +544,13 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
   font-size: 2.8125rem;
   color: #f4c203;
   border: 1px solid yellow;
+}
+
+@media (min-width: 992px) {
+  .social-media-buttons .__social-button {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .video-preview-button {

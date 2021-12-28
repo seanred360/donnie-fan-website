@@ -13,6 +13,10 @@ const useAxios = ({ url, method, body = null, headers = null }) => {
     const fetchData = () => {
       axios[method](url, JSON.parse(headers), JSON.parse(body), {
         withCredentials: true,
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json",
+        },
       })
         .then((res) => {
           setResponse(res.data);

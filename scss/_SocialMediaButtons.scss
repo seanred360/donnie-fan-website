@@ -16,9 +16,11 @@
     @include font-size(45);
     color: $yellow;
     border: 1px solid yellow;
-    // background: $yellow;
-    // border-radius: 50%;
-    // filter: drop-shadow(4px 4px 4px #f4c203);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
 
     @include respond-above(lg) {
       width: 60px;

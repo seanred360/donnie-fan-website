@@ -66,6 +66,11 @@
             font-family: "MuseoModerno", cursive;
             @include font-size(24);
             color: $black;
+            transition: all 0.3s ease;
+
+            &:hover {
+              transform: scale(1.05);
+            }
           }
         }
       }

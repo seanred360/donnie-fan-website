@@ -202,10 +202,11 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
   background: #f4c203;
   color: black;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .nav-bar .nav-bar-contents .__left-content .__logo-link:hover {
-  border: 2px solid #ffffff;
+  transform: scale(1.05);
 }
 
 @media (min-width: 992px) {
@@ -496,6 +497,10 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
     font-family: "MuseoModerno", cursive;
     font-size: 1.5rem;
     color: black;
+    transition: all 0.3s ease;
+  }
+  .__top-elements .__left-elements .__header .__book-me-group .--navigation-button:hover {
+    transform: scale(1.05);
   }
   .__top-elements .__social-media-group .--social-media-label {
     font-size: 1.5rem;
@@ -544,6 +549,11 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
   font-size: 2.8125rem;
   color: #f4c203;
   border: 1px solid yellow;
+  transition: all 0.3s ease;
+}
+
+.social-media-buttons .__social-button:hover {
+  transform: scale(1.05);
 }
 
 @media (min-width: 992px) {

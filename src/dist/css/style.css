@@ -536,7 +536,7 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
   margin-bottom: 36px;
 }
 
-.social-media-buttons .__circle-button {
+.social-media-buttons .__social-button {
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,24 +1,19 @@
 import React from "react";
 import { FaWeibo } from "react-icons/fa";
-// import { AiFillInstagram } from "react-icons/ai";
 import { AiFillWechat } from "react-icons/ai";
-// import { AiFillYoutube } from "react-icons/ai";
 
 const SocialMediaButtons = () => {
   return (
     <div className="social-media-buttons">
-      <button className="__circle-button">
+      <a
+        className="__social-button"
+        href="https://weibo.com/u/7708697903?tabtype=feed"
+      >
         <FaWeibo />
-      </button>
-      {/* <button className="__circle-button">
-        <AiFillInstagram />
-      </button> */}
-      <button className="__circle-button">
+      </a>
+      <a className="__social-button" href="weixin://dl/chat?dj281444">
         <AiFillWechat />
-      </button>
-      {/* <button className="__circle-button">
-        <AiFillYoutube />
-      </button> */}
+      </a>
     </div>
   );
 };

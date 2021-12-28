@@ -60,7 +60,11 @@ const SocialMediaFeed = () => {
                     .replace(/<span\b[^>]*>/gm, "")
                     .replace(/<\/span>/gm, "")}
                 </span>
-                <img className="__content-thumbnail" src={post["thumbnail"]} />
+                <img
+                  className="__content-thumbnail"
+                  src={post["thumbnail"]}
+                  alt={post["title"]}
+                />
               </div>
             </div>
           ))}

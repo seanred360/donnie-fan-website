@@ -7,7 +7,7 @@ import VideosPage from "./pages/VideosPage";
 import Contact from "./common/Contact";
 import NotFound from "./pages/NotFoundPage";
 
-class Main extends Component {
+class Routes extends Component {
   render() {
     return (
       <Switch>
@@ -15,7 +15,7 @@ class Main extends Component {
         <Route exact path="/home" component={HomePage}></Route>
         <Route exact path="/about" component={AboutPage}></Route>
         <Route exact path="/events" component={EventsCalendar}></Route>
-        <Route exact path="/videos" component={VideosPage}></Route>
+        {/* <Route exact path="/videos" component={VideosPage}></Route> */}
         <Route exact path="/contact" component={Contact}></Route>
         <Route exact path="/" component={HomePage}></Route>
         <Route path="" component={NotFound}></Route>
@@ -24,4 +24,4 @@ class Main extends Component {
   }
 }
 
-export default Main;
+export default Routes;

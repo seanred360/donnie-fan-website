@@ -1,5 +1,5 @@
 import React from "react";
-import Main from "./components/Main";
+import Routes from "./components/Routes";
 import NavBar from "./components/common/navbar/NavBar";
 import Footer from "./components/common/Footer";
 
@@ -8,7 +8,7 @@ const App = () => {
     <div className="App">
       <NavBar />
       <div className="page-wrapper">
-        <Main />
+        <Routes />
       </div>
       <Footer />
     </div>

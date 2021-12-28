@@ -1,6 +1,10 @@
 import Navigationbutton from "./NavigationButton";
 
 const MobileMenu = ({ isOpen, onOpen }) => {
+  const handleClick = () => {
+    window.location.href = "https://weibo.com/u/7708697903?tabtype=newVideo";
+  };
+
   return (
     <>
       <div className={`fade-overlay ${isOpen ? `--open` : ``}`}></div>
@@ -13,11 +17,14 @@ const MobileMenu = ({ isOpen, onOpen }) => {
           <Navigationbutton onOpen={onOpen} url={"home"} label="Home" />
           {/* <Navigationbutton onOpen={onOpen} url={"about"} label="About" /> */}
           <Navigationbutton onOpen={onOpen} url={"events"} label="Events" />
-          <Navigationbutton
+          {/* <Navigationbutton
             onOpen={onOpen}
-            url={"https://weibo.com/u/7708697903?tabtype=newVideo"}
+            url={"/videos"}
             label="Videos"
-          />
+          /> */}
+          <button className="--navigation-button" onClick={handleClick}>
+            Videos
+          </button>
           <Navigationbutton onOpen={onOpen} url={"contact"} label="Contact" />
         </div>
       </div>

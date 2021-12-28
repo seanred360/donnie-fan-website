@@ -43,6 +43,7 @@
         @include font-size(62);
         color: $black;
         background: $yellow;
+        transition: all 0.3s ease;
 
         @include respond-above(lg) {
           width: 200px;
@@ -51,9 +52,7 @@
           @include font-size(100);
 
           &:hover {
-            @include font-size(110);
-            border: 2px solid black;
-            transition: all 0.3s ease;
+            transform: scale(1.03);
           }
         }
       }

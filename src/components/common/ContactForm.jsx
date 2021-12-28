@@ -1,4 +1,3 @@
-import React from "react";
 import FadeInSection from "../utility/FadeInSection";
 
 const ContactForm = ({ selectedReason, sendEmail }) => {

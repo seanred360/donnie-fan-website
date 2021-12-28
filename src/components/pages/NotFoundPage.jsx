@@ -1,4 +1,3 @@
-import React from "react";
 import BackButton from "../common/BackButton";
 
 const NotFoundPage = () => {

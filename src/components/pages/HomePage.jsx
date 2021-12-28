@@ -1,8 +1,5 @@
 import useViewport from "../utility/useViewport";
-// import donnieAtWindyCity from "../../images/pic.jpeg";
-// import jokePreview from "../../images/joke-preview.gif";
 import tellingJokesPreview from "../../images/telling-jokes-preview.mp4";
-// import profilePreview from "../../images/profile-preview.mp4";
 import SocialMediaButtons from "../common/SocialMediaButtons";
 import VideoPreviewButton from "../VideoPreviewButton";
 import SocialMediaFeed from "../common/SocialMediaFeed";

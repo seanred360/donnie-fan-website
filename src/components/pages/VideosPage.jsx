@@ -1,4 +1,3 @@
-import React from "react";
 import VideoPreviewButton from "../VideoPreviewButton";
 
 const VideosPage = () => {

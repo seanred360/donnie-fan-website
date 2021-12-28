@@ -1,4 +1,3 @@
-import React from "react";
 import aboutPhoto from "../../images/donnie-at-comedy-club-china.jpg";
 import FadeInSection from "../utility/FadeInSection";
 

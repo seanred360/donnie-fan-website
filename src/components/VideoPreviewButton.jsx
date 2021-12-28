@@ -1,4 +1,3 @@
-import React from "react";
 import donnieRooftop from "../images/donnie-rooftop.jpg";
 import FadeInSection from "../components/utility/FadeInSection";
 

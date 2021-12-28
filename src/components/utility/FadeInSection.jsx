@@ -1,11 +1,11 @@
-import React from "react";
+import { useState, useEffect, useRef } from "react";
 
 const FadeInSection = (props) => {
-  const [isVisible, setVisible] = React.useState(false);
-  const domRef = React.useRef();
+  const [isVisible, setVisible] = useState(false);
+  const domRef = useRef();
   const animationDirection = props.animationDirection;
 
-  React.useEffect(() => {
+  useEffect(() => {
     const domRefCurrent = domRef.current; // fixes lint error
     const options = {
       root: null,

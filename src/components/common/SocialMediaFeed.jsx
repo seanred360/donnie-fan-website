@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import FadeInSection from "../utility/FadeInSection";
 import useAxios from "../../custom-hooks/useAxios";
 

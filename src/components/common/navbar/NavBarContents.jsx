@@ -14,10 +14,6 @@ const NavBarContents = ({ isOpen, onOpen }) => {
       </div>
 
       <div className="__left-content flex"></div>
-      {/* <div className="__language">
-        <button className="--english-button --language-button">En</button>|
-        <button className="--chinese-button --language-button">中文</button>
-      </div> */}
 
       <HamburgerButton isOpen={isOpen} onOpen={onOpen} />
     </div>
@@ -28,15 +24,15 @@ const NavBarContents = ({ isOpen, onOpen }) => {
         <div className="__website-name">Donnie Fan Comedy</div>
       </div>
       <div className="__nav-links">
-        <Navigationbutton label="About" url={"about"} />
+        {/* <Navigationbutton label="About" url={"about"} /> */}
         <Navigationbutton label="Events" url={"events"} />
         <Navigationbutton label="Videos" url={"videos"} />
         <Navigationbutton label="Contact" url={"contact"} />
       </div>
-      <div className="__language">
+      {/* <div className="__language">
         <button className="--english-button --language-button">En</button>|
         <button className="--chinese-button --language-button">中文</button>
-      </div>
+      </div> */}
     </div>
   );
 };

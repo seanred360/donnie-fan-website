@@ -1,7 +1,6 @@
 import FadeInSection from "../utility/FadeInSection";
 import { GiMicrophone } from "react-icons/gi";
 import { FaHandshake } from "react-icons/fa";
-// import { BsBookHalf } from "react-icons/bs";
 import { FaNewspaper } from "react-icons/fa";
 import { MdWavingHand } from "react-icons/md";
 
@@ -37,17 +36,6 @@ const ContactOptions = ({ setSelectedReason }) => {
           </button>
           <p className="--label">I have a business opportunity</p>
         </div>
-
-        {/* <div className="__contact-option">
-          <button
-            className="__circle-button"
-            onClick={() => setSelectedReason("I am a publisher")}
-          >
-            <BsBookHalf />
-          </button>
-          <p className="--label">I am a publisher</p>
-        </div> */}
-
         <div className="__contact-option">
           <button
             className="__circle-button"

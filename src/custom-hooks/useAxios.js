@@ -16,7 +16,7 @@ const useAxios = ({ url, method, body = null, headers = null }) => {
         headers: {
           "Access-Control-Allow-Origin": "*",
           "Content-Type": "text/plain",
-          "Referer": "donniefan.com",
+          "Referer": "",
         },
       })
         .then((res) => {

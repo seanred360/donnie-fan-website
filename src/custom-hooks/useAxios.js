@@ -15,7 +15,7 @@ const useAxios = ({ url, method, body = null, headers = null }) => {
         withCredentials: true,
         headers: {
           "Access-Control-Allow-Origin": "*",
-          "Content-Type": "application/json",
+          "Content-Type": "text/plain",
         },
       })
         .then((res) => {

@@ -40,22 +40,32 @@ const Contact = (props) => {
 
   if (error)
     return (
-      <div className="section-header-group">
-        <FadeInSection>
-          <h3 className="__header">
-            ERROR! Sorry I failed to send your message :(
-          </h3>
-          <p className="__label">email me at "donniefan@gmail.com"</p>
-        </FadeInSection>
+      <div className="contact">
+        <div className="section-header-style-wrapper">
+          <div className="section-header-group">
+            <FadeInSection>
+              <h3 className="__header">
+                ERROR! Sorry I failed to send your message :(
+              </h3>
+              <p className="__label">email me at "donniefan@gmail.com"</p>
+            </FadeInSection>
+          </div>
+        </div>
       </div>
     );
   if (mailSent && !error)
     return (
-      <div className="section-header-group">
-        <FadeInSection>
-          <h3 className="__header">Message Sent!</h3>
-          <p className="__label">I will get back to you as soon as possible</p>
-        </FadeInSection>
+      <div className="contact">
+        <div className="section-header-style-wrapper">
+          <div className="section-header-group">
+            <FadeInSection>
+              <h3 className="__header">Message Sent!</h3>
+              <p className="__label">
+                I will get back to you as soon as possible
+              </p>
+            </FadeInSection>
+          </div>
+        </div>
       </div>
     );
   if (!selectedReason)

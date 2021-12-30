@@ -14,7 +14,7 @@ const MobileMenu = ({ isOpen, onOpen }) => {
         }`}
       >
         <div className="__mobile-menu">
-          <Navigationbutton onOpen={onOpen} url={"home"} label="Home" />
+          <Navigationbutton onOpen={onOpen} url={""} label="Home" />
           {/* <Navigationbutton onOpen={onOpen} url={"about"} label="About" /> */}
           <Navigationbutton onOpen={onOpen} url={"events"} label="Events" />
           {/* <Navigationbutton

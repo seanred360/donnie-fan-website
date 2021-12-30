@@ -1,5 +1,5 @@
 import useViewport from "../../utility/useViewport";
-import LogoLink from "../LogoLink";
+import LogoLink from "./LogoLink";
 import HamburgerButton from "./HamburgerButton";
 import Navigationbutton from "./NavigationButton";
 

@@ -4,7 +4,7 @@ const LogoLink = () => {
   let history = useHistory();
 
   function handleClick() {
-    history.push("/home");
+    history.push("/");
   }
 
   return (

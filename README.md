@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - GitHub URL: [https://github.com/seanred360/donnie-fan-website]
-- Live Site URL: [donniefan.com]
+- Live Site URL: [https://donniefan.com]
 
 ## My process
 
@@ -47,7 +47,7 @@ Users should be able to:
 - [react-icons](https://react-icons.github.io/react-icons/) - For icons as React components
 - [Netlify](https://www.netlify.com) - For hosting
 - [SASS](https://sass-lang.com/) - For styles
-- [EmailJS](emailjs.com) - Backend for handling emails on the contact form
+- [EmailJS](https://emailjs.com) - Backend for handling emails on the contact form
 - [Weibo to RSS](https://github.com/zgq354/weibo-rss)
 - [rss to json](https://rss2json.com/)
 - [React functionals components and hooks] - I moved away from the class based component workflow.
@@ -225,5 +225,5 @@ In the future Donnie wants to have his photography, theatre plays, and other por
 
 ## Author
 
-- Website - [Sean Redmon](seanred.io)
+- Website - [Sean Redmon](https://seanred.io)
 - GitHub - [Sean Redmon](https://github.com/seanred360)

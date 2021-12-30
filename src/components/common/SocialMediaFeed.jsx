@@ -60,7 +60,9 @@ const SocialMediaFeed = () => {
                     .replace(/<br\b[^>]*>/gm, "")
                     .replace(/<\/br>/gm, "")
                     .replace(/<span\b[^>]*>/gm, "")
-                    .replace(/<\/span>/gm, "")}
+                    .replace(/<\/span>/gm, "")
+                    .replace(/<div\b[^>]*>/gm, "")
+                    .replace(/<\/div>/gm, "")}
                 </span>
                 <a href={post["link"]}>
                   <img

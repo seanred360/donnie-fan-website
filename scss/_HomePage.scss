@@ -1,5 +1,7 @@
 .home-page {
   flex-direction: column;
+  // margin-top: 100vw;
+  z-index: -2;
 
   .__header {
     line-height: 60px;

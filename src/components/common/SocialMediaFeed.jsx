@@ -12,7 +12,6 @@ const SocialMediaFeed = () => {
 
   useEffect(() => {
     if (response !== null) {
-      console.log(response);
       setSocialMediaData(response);
     }
   }, [response]);

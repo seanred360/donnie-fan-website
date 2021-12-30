@@ -30,11 +30,9 @@ const Contact = (props) => {
       )
       .then(
         (result) => {
-          console.log(result.text);
           setMailSent(true);
         },
         (error) => {
-          console.log(error.text);
           setError(error);
         }
       );

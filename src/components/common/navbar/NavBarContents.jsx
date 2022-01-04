@@ -28,7 +28,7 @@ const NavBarContents = ({ isOpen, onOpen }) => {
         <div className="__website-name">Donnie Fan Comedy</div>
       </div>
       <div className="__nav-links">
-        {/* <Navigationbutton label="About" url={"about"} /> */}
+        <Navigationbutton label="About" url={"about"} />
         <Navigationbutton label="Events" url={"events"} />
         {/* <Navigationbutton label="Videos" url={"videos"} /> */}
         <button className="--navigation-button" onClick={handleClick}>

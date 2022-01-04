@@ -15,6 +15,7 @@ html {
 body {
   display: block;
   position: relative;
+  min-height: 100vh;
   font-family: "MuseoModerno", cursive;
   background: black;
   background-repeat: no-repeat;
@@ -120,8 +121,9 @@ body Link:focus, body Link:hover, body Link:visited, body Link:link, body Link:a
   bottom: 0;
   left: 0;
   width: 100vw;
-  height: 200px;
+  height: 100px;
   margin-bottom: 0px;
+  margin-top: auto;
   background-image: url("../../images/yellow-wavy-footer.png");
 }
 

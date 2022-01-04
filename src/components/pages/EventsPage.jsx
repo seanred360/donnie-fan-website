@@ -14,6 +14,7 @@ const EventsCalendar = () => {
       <div className="events-group">
         {events.map((event) => (
           <Event
+            key={event["poster"]}
             date={event["date"]}
             cityName={event["cityName"]}
             timeLocation={event["timeLocation"]}

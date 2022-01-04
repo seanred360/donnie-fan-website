@@ -1,7 +1,7 @@
 import { AiOutlineCalendar } from "react-icons/ai";
 import FadeInSection from "../components/utility/FadeInSection";
 
-const Event = ({ date, cityName, eventTimeLocation, eventPoster }) => {
+const Event = ({ date, cityName, timeLocation, poster }) => {
   return (
     <div className="event">
       <div className="__top-content">
@@ -11,14 +11,14 @@ const Event = ({ date, cityName, eventTimeLocation, eventPoster }) => {
         </div>
         <div className="event--text-group">
           <p className="__event--city-name">{cityName}</p>
-          <p className="__event--time-location">{eventTimeLocation}</p>
+          <p className="__event--time-location">{timeLocation}</p>
         </div>
       </div>
 
       <FadeInSection>
         <img
           className="__event--poster"
-          src={eventPoster}
+          src={poster}
           alt="a poster advertising the event"
         />
       </FadeInSection>

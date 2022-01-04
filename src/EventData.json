@@ -1,0 +1,88 @@
+{
+  "events": [
+    {
+      "date": "Jan 9",
+      "cityName": "Beijing",
+      "timeLocation": "3:30pm",
+      "poster": "images/posters/poster-cinkerpictures-jan1.jpg"
+    },
+    {
+      "date": "Jan 8",
+      "cityName": "Beijing",
+      "timeLocation": "7:30 pm | 798 Art District Li-Pi Records",
+      "poster": "images/posters/poster-lipi-jan8.jpg"
+    },
+    {
+      "date": "Dec 8",
+      "cityName": "Beijing",
+      "timeLocation": "7:30pm | Umu Club",
+      "poster": "images/posters/poster-umuclub-dec18.jpg"
+    },
+    {
+      "date": "Nov 26-28",
+      "cityName": "Beijing",
+      "timeLocation": "Various times | Various locations",
+      "poster": "images/posters/poster-various-nov26-28.jpg"
+    },
+    {
+      "date": "Nov 20",
+      "cityName": "Beijing",
+      "timeLocation": "8:00pm | Finnegan's Wake",
+      "poster": "images/posters/poster-finnegans-nov20.jpg"
+    },
+    {
+      "date": "Oct 29",
+      "cityName": "Beijing",
+      "timeLocation": "9:00Pm | Amiga Bar",
+      "poster": "images/posters/poster-amiga-oct29.jpg"
+    },
+    {
+      "date": "Oct 27",
+      "cityName": "Beijing",
+      "timeLocation": "8:30pm | Glou Bar & Kitchen",
+      "poster": "images/posters/poster-glou-oct27.jpg"
+    },
+    {
+      "date": "Sept 10",
+      "cityName": "Beijing",
+      "timeLocation": "8:30pm | Cosi Cosi",
+      "poster": "images/posters/poster-cosicosi-sept10.png"
+    },
+    {
+      "date": "Aug 14",
+      "cityName": "Kunming",
+      "timeLocation": "8:30pm | Vervo Club & Bar",
+      "poster": "images/posters/poster-kunming-aug14.jpg"
+    },
+    {
+      "date": "Jul 31",
+      "cityName": "Chengdu",
+      "timeLocation": "8:30pm | Aloha Rooftop Cafe",
+      "poster": "images/posters/poster-aloha-jul31.jpg"
+    },
+    {
+      "date": "Jun 26",
+      "cityName": "Beijing",
+      "timeLocation": "8:30pm | Cavern Club Beijing",
+      "poster": "images/posters/poster-cavern-jun26.jpg"
+    },
+    {
+      "date": "May 14",
+      "cityName": "Beijing",
+      "timeLocation": "9pm | JianJinZhongXin",
+      "poster": "images/posters/poster-jianjinzhongxin-may14.png"
+    },
+    {
+      "date": "Apr 2-4",
+      "cityName": "Beijing",
+      "timeLocation": "See poster | Various locations",
+      "poster": "images/posters/poster-various-Apr2-4.jpg"
+    },
+    {
+      "date": "Mar 28",
+      "cityName": "Beijing",
+      "timeLocation": "7:30pm | Yonee Bar",
+      "poster": "images/posters/poster-yonee-mar28.jpg"
+    }
+  ]
+}

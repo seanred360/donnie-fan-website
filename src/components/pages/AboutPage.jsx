@@ -31,7 +31,7 @@ const AboutPage = () => {
           <section className="__section-two">
             Fan performs both English and Chinese language comedy. As a writer
             he's worked on the opera play, The Spring River Flows to the
-            East(2014), The Return of Kesai(2022-AST Director/writer) The Tony
+            East(2014), The Return of Kesai(2017-AST Director/writer) The Tony
             Show(2019), Medea(2022-Director/Writer) and Haves and Have Lots
             (2022-Writer/Creative Director).
           </section>

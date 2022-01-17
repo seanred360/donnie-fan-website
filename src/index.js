@@ -4,6 +4,7 @@ import reportWebVitals from "./reportWebVitals";
 import App from "./App";
 import "./dist/css/style.css";
 import { BrowserRouter } from "react-router-dom";
+import { unregister } from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
+unregister();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

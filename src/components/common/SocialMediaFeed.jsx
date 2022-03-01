@@ -3,7 +3,8 @@ import FadeInSection from "../utility/FadeInSection";
 import useAxios from "../../custom-hooks/useAxios";
 
 const SocialMediaFeed = () => {
-  const [socialMediaData, setSocialMediaData] = useState({});
+  const [feedData, setFeedData] = useState();
+  const [posts, setPosts] = useState();
 
   const { response, loading, error } = useAxios({
     method: "get",
@@ -12,7 +13,8 @@ const SocialMediaFeed = () => {
 
   useEffect(() => {
     if (response !== null) {
-      setSocialMediaData(response);
+      setPosts(response.items.filter((post) => post["content"] != ""));
+      setFeedData(response.feed);
     }
   }, [response]);
 
@@ -30,7 +32,7 @@ const SocialMediaFeed = () => {
       </div>
       <FadeInSection>
         <div className="__social-window">
-          {socialMediaData["items"].map((post) => (
+          {posts.map((post) => (
             <div key={post["title"]} className="__weibo-post">
               <div className="__top">
                 <img
@@ -43,10 +45,7 @@ const SocialMediaFeed = () => {
                   className="__username"
                 >
                   {/* remove these specific Chinese characters in a series 的微博 but allow others. Because they mean 'his weibo' DJ will never name himself this, but may name himself something else in Chinese*/}
-                  {socialMediaData["feed"]["title"].replace(
-                    /[(\u7684\u5fae\u535a)]/g,
-                    ""
-                  )}
+                  {feedData["title"].replace(/[(\u7684\u5fae\u535a)]/g, "")}
                 </a>
                 <span className="__post-date">{post["pubDate"]}</span>
               </div>
@@ -65,11 +64,13 @@ const SocialMediaFeed = () => {
                     .replace(/<\/div>/gm, "")}
                 </span>
                 <a href={post["link"]}>
-                  <img
-                    className="__content-thumbnail"
-                    src={post["thumbnail"]}
-                    alt={post["title"]}
-                  />
+                  {post["thumbnail"] && (
+                    <img
+                      className="__content-thumbnail"
+                      src={post["thumbnail"]}
+                      alt={post["title"]}
+                    />
+                  )}
                 </a>
               </div>
             </div>

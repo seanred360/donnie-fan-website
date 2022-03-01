@@ -7,7 +7,8 @@ import Contact from "../common/Contact";
 import FadeInSection from "../utility/FadeInSection";
 import { GiMicrophone } from "react-icons/gi";
 import Navigationbutton from "../common/navbar/NavigationButton";
-import Hero from "./LandingPage";
+// import Hero from "./LandingPage";
+import HeroImage from "../../images/from-zero-to-hero.jpg";
 
 const HomePage = () => {
   const { width } = useViewport();
@@ -16,7 +17,14 @@ const HomePage = () => {
   return width < breakpoint ? (
     // MOBILE PAGE --------------------------------------------------
     <>
-      <Hero />
+      {/* <Hero /> */}
+      <div className="hero-banner">
+        <div className="hero-title">
+          <h1>An All New Stand-up Comedy Special</h1>
+        </div>
+        <img src={HeroImage} alt="From Zero to Hero" />
+      </div>
+
       <div className="home-page flex flex-ai-c flex-jc-c">
         <div className="__header">
           <FadeInSection>
@@ -26,7 +34,7 @@ const HomePage = () => {
         </div>
 
         <div className="__hero-image-wrapper flex flex-ai-c flex-jc-c">
-          <video className="--hero-image" autoPlay loop muted>
+          <video className="--donnie-image" autoPlay loop muted>
             <source src={tellingJokesPreview} type="video/mp4" />
           </video>
         </div>
@@ -48,7 +56,11 @@ const HomePage = () => {
   ) : (
     // DESKTOP PAGE --------------------------------------------------
     <>
-      <Hero />
+      {/* <Hero /> */}
+      <div className="hero-banner">
+        <img src={HeroImage} alt="From Zero to Hero" />
+      </div>
+
       <div className="home-page ">
         <div className="__top-elements">
           <div className="__left-elements">

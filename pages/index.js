@@ -1,16 +1,8 @@
 import Meta from "../components/Meta";
 import FadeInSection from "../components/common/utility/FadeInSection";
-import useInView from "react-cool-inview";
-import dynamic from "next/dynamic";
-const SocialMediaFeed = dynamic(() =>
-  import("../components/common/SocialMediaFeed")
-);
+import SocialMediaFeed from "../components/common/SocialMediaFeed";
 
 const home = () => {
-  const { observe, inView } = useInView({
-    onEnter: ({ unobserve }) => unobserve(), // only run once
-  });
-
   return (
     <>
       <Meta
@@ -34,7 +26,7 @@ const home = () => {
             />
           </video>
         </div>
-        <div ref={observe}>{inView && <SocialMediaFeed />}</div>
+        <SocialMediaFeed />
       </div>
     </>
   );

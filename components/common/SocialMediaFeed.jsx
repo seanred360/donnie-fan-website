@@ -9,7 +9,7 @@ const SocialMediaFeed = () => {
 
   const { response, loading, error } = useAxios({
     method: "get",
-    url: "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frssfeed.today%2Fweibo%2Frss%2F7708697903",
+    url: "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Frssfeed.today%2Fweibo%2Frss%2F7708697903&api_key=6or73ip4a3pzmkfigf3mi3j8i3rea2ydtsemmou8",
   });
 
   useEffect(() => {
@@ -23,7 +23,6 @@ const SocialMediaFeed = () => {
   if (error) return <h1>error</h1>;
   return (
     <div className="social-media-feed">
-      
       <SectionHeader
         header="Latest Weibo"
         subHeader="See What I'm currently doing"

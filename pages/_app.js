@@ -8,7 +8,6 @@ import "../styles/SocialMediaButtons.scss";
 import "../styles/SocialMediaFeed.scss";
 import "../styles/ReactImageGallery.scss";
 
-
 function MyApp({ Component, pageProps }) {
   return (
     <Layout>

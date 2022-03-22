@@ -1,7 +1,8 @@
 {
-  "name": "next-crash-course",
-  "version": "0.1.0",
+  "name": "donnie-fan-website",
+  "version": "2.0.1",
   "private": true,
+  "author": "Sean Redmon at seanred.io",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",

@@ -1,0 +1,27 @@
+@use "colors" as *;
+
+.section-header-style-wrapper {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.section-header-group {
+  margin-left: auto;
+  border-left: 6px solid $yellow;
+  padding-left: 10px;
+  margin: 36px 0px;
+
+  .header {
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .label {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 16px;
+  }
+}

@@ -1,0 +1,81 @@
+@use "colors" as *;
+@use "mixins" as *;
+
+.container {
+  z-index: 100;
+  background: black;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 64px;
+    padding: 16px 24px;
+    padding-right: 16px;
+    font-size: 16px;
+    color: $white;
+    border-bottom: 2px solid $yellow;
+
+    @include respond-above(lg) {
+      height: 100px;
+      padding-right: 3rem;
+      font-size: 24px;
+      color: $white;
+      // border: none;
+    }
+
+    .left-content {
+      display: flex;
+
+      // logo home link
+      a {
+        width: 30px;
+        height: 30px;
+        margin-right: 40px;
+        background: $yellow;
+        color: $black;
+        font-size: 16px;
+        text-align: center;
+        line-height: 32px;
+        font-family: "MuseoModerno", cursive;
+        font-weight: 400;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        @include respond-above(lg) {
+          width: unset;
+          height: unset;
+          padding: 1rem;
+          background: $yellow;
+          font-size: 24px;
+          color: $black;
+        }
+      }
+
+      .website-name {
+        white-space: nowrap;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+
+    ul {
+      display: flex;
+      list-style-type: none;
+
+      li a {
+        padding: 16px;
+        text-decoration: none;
+
+        @include respond-below(lg) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@use "../mixins" as *;
+@use "../colors" as *;
+
+.events-calendar {
+  .events-group {
+    @include respond-above(sm) {
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 24px;
+    }
+
+    @include respond-above(lg) {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      column-gap: 24px;
+    }
+  }
+
+  .event {
+    .__top-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+      align-items: center;
+      border-bottom: 4px solid $yellow;
+
+      .__calendar {
+        position: relative;
+        .__calendar--icon {
+          width: 100px;
+          height: 100px;
+        }
+        .__calendar--label {
+          position: absolute;
+          top: 50px;
+          left: 22px;
+        }
+      }
+    }
+
+    .event--text-group {
+      .__event--city-name {
+        margin: 0;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 24px;
+      }
+      .__event--time-location {
+        margin: 0;
+        font-weight: 200;
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+.__event--poster {
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border: 4px solid $white;
+  object-fit: cover;
+}

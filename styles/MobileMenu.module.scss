@@ -1,0 +1,58 @@
+@use "colors" as *;
+@use "mixins" as *;
+
+.fade-overlay {
+  background: transparent;
+  z-index: 2;
+  transition: all 0.3s ease;
+
+  &.open {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+  }
+}
+
+.container {
+  position: absolute;
+  width: 271px;
+  height: 100vh;
+  right: -100%;
+  background: $black;
+  // border-left: 3px solid $yellow;
+  transition: all 0.3s ease;
+  z-index: 10;
+
+  &.open {
+    right: 0;
+  }
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 223px;
+  height: 380px;
+  margin: 1.5rem;
+  border-radius: 10px;
+
+  ul {
+    li a {
+      color: $white;
+      text-align: left;
+      font-size: 40px;
+      line-height: 60px;
+
+      &::before {
+        display: inline-block;
+        content: "";
+        width: 6px;
+        height: 46px;
+        margin-right: 13px;
+        background: $yellow;
+      }
+    }
+  }
+}

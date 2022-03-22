@@ -1,0 +1,33 @@
+@use "colors" as *;
+@use "mixins" as *;
+
+.social-media-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 36px;
+
+  .__social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 45px;
+    height: 45px;
+    margin-left: 6px;
+    font-size: 45px;
+    color: $yellow;
+    border: 1px solid yellow;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    @include respond-above(lg) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}

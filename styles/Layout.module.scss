@@ -1,12 +1,9 @@
 @use "colors" as *;
+@use "mixins" as *;
 
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: flex-start;
-  // align-items: center;
   background: black;
   color: white;
 }
@@ -16,12 +13,6 @@
   margin-right: auto;
   margin-left: auto;
   padding: 5rem 0;
-  // flex: 1;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: flex-start;
-  // align-items: center;
-  // font-size: 1.25rem;
 }
 
 .footer {
@@ -31,4 +22,41 @@
   background-color: $yellow;
   color: white;
   text-align: center;
+}
+
+.hero-banner {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-bottom: 36px;
+  background-image: url("/images/hero.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h1 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    background-color: #f4c403b7;
+    font-family: "Bangers", cursive;
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    white-space: nowrap;
+
+    @include respond-between(sm, lg) {
+      font-size: 80px;
+    }
+
+    @include respond-above(lg) {
+      font-size: 100px;
+    }
+
+    @include respond-above(xxxl) {
+      font-size: 200px;
+    }
+  }
 }

@@ -7,8 +7,8 @@ const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleOpen = (openBool) => {
     setIsOpen(openBool);
-    if (isOpen) document.body.classList.remove("no-scroll");
-    if (!isOpen) document.body.classList.add("no-scroll");
+    if (openBool === true) document.body.classList.add("no-scroll");
+    if (openBool === false) document.body.classList.remove("no-scroll");
   };
 
   return (

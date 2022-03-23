@@ -7,6 +7,7 @@ import "../styles/pages/Home.scss";
 import "../styles/SocialMediaButtons.scss";
 import "../styles/SocialMediaFeed.scss";
 import "../styles/ReactImageGallery.scss";
+import "../styles/_animations.scss";
 
 function MyApp({ Component, pageProps }) {
   return (

@@ -5,8 +5,8 @@ import styles from "../../styles/NavBar.module.scss";
 const NavBarContents = ({ isOpen, onOpen }) => {
   return (
     <>
-      <div className={styles.content}>
-        <div className={styles["left-content"]}>
+      <nav className={styles.content}>
+        <div className={styles["left-content"]} onClick={() => onOpen(false)}>
           <Link href="/">DF</Link>
           <div className={styles["website-name"] + " hide-for-mobile"}>
             Donnie Fan Comedy
@@ -30,7 +30,7 @@ const NavBarContents = ({ isOpen, onOpen }) => {
           </li>
         </ul>
         <HamburgerButton isOpen={isOpen} onOpen={onOpen} />
-      </div>
+      </nav>
     </>
   );
 };

@@ -19,7 +19,7 @@ const MobileMenu = ({ isOpen, onOpen }) => {
               <Link href="/about">About</Link>
             </li>
             <li className="hide-for-desktop" onClick={() => onOpen(false)}>
-              <Link href="/events">Events</Link>
+              <Link href="/shows">Events</Link>
             </li>
             <li className="hide-for-desktop" onClick={() => onOpen(false)}>
               <Link href="/videos">Videos</Link>

@@ -4,28 +4,28 @@
 .fade-overlay {
   background: transparent;
   z-index: 2;
-  transition: all 0.3s ease;
+  animation: fade-out 200ms ease-in-out forwards;
 
   &.open {
     position: absolute;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 64px);
     background: rgba(0, 0, 0, 0.9);
+    animation: fade-in 200ms ease-in-out forwards;
   }
 }
 
 .container {
   position: absolute;
   width: 271px;
-  height: 100vh;
-  right: -100%;
-  background: $black;
-  // border-left: 3px solid $yellow;
-  transition: all 0.3s ease;
+  height: calc(100vh - 64px);
+  right: 0;
+  background: transparent;
   z-index: 10;
+  animation: fade-out 200ms ease-in-out forwards;
 
   &.open {
-    right: 0;
+    animation: fade-in 200ms ease-in-out forwards;
   }
 }
 
@@ -54,5 +54,35 @@
         background: $yellow;
       }
     }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
   }
 }

@@ -16,12 +16,21 @@
 }
 
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 100%;
   height: 50px;
-  // background-image: url("/images/yellow-wavy-footer.png");
   background-color: $yellow;
-  color: white;
+  color: $black;
   text-align: center;
+
+  a {
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 
 .hero-banner {
@@ -58,5 +67,11 @@
     @include respond-above(xxxl) {
       font-size: 200px;
     }
+  }
+
+  h2 {
+    padding: 10px;
+    background-color: white;
+    font-size: 16px;
   }
 }

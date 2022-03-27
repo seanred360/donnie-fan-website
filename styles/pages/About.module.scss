@@ -9,15 +9,11 @@
 
   div {
     max-width: 600px;
-
     .photo {
       width: 100%;
-      height: 40vh;
-      margin: 36px 0px;
-      background-image: url("/images/donnie-at-comedy-club-china.webp");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      object-fit: cover;
+      object-position: 55% 0;
+      margin: 36px 0;
     }
   }
 }

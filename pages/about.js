@@ -24,7 +24,9 @@ const about = () => {
           long list of shows awaiting in 2022 as he prepares his first
           headliner: From Hero to Zero.
         </section>
-        <div className={styles.photo}></div>
+        <video className={styles.photo} autoPlay loop muted>
+          <source src="/images/telling-jokes-preview.webm" type="video/webm" />
+        </video>
         <section>
           Fan performs both English and Chinese language comedy. As a writer
           he's worked on the opera play, The Spring River Flows to the

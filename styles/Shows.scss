@@ -1,0 +1,129 @@
+@use "mixins" as *;
+
+.container {
+  .shows {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    overflow-wrap: break-word;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    .show {
+      flex: 0 0% 33.333333%;
+      max-width: 33.333333%;
+      position: relative;
+      width: 100%;
+
+      @include respond-below(sm) {
+        max-width: unset;
+        margin: 0 auto;
+      }
+
+      .show-holder {
+        position: relative;
+        overflow: hidden;
+
+        .text-holder {
+          position: absolute;
+          height: auto;
+          width: auto;
+          bottom: 0;
+          margin: 0 10px 10px;
+          opacity: 1;
+          z-index: 20;
+          background-color: rgba(255, 255, 255, 1);
+
+          .text-holder-outer {
+            padding: 15px 0;
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+
+            .text-date-holder {
+              border-right: 1px solid #ff0000;
+              text-transform: uppercase;
+              display: table-cell;
+              vertical-align: middle;
+              width: 60px;
+
+              .text-date-holder-inner {
+                color: #ff0000;
+
+                .text-day {
+                  display: block;
+                  font-size: 20px;
+                  line-height: 20px;
+                  letter-spacing: 1px;
+                  font-weight: 600;
+                  font-style: normal;
+                  text-transform: uppercase;
+                }
+                .text-month {
+                  display: block;
+                }
+              }
+            }
+            .text-holder-inner {
+              padding: 0 10px;
+              text-align: left;
+              color: #fff;
+              display: table-cell;
+              vertical-align: middle;
+
+              .text-title {
+                color: black;
+                font-family: "Oswald", sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                line-height: 1.304347826086957em;
+              }
+              .categories {
+                text-align: left;
+                padding: 0 10px;
+              }
+            }
+          }
+        }
+
+        .image-holder {
+          .image {
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+            border-style: none;
+            // width: 600px;
+            // aspect-ratio: auto 600 / 432;
+            width: 342px;
+            aspect-ratio: auto 342 / 458;
+            // margin: 0 auto;
+
+            img {
+              max-height: 33vh;
+
+              width: 100%;
+              height: 100%;
+              //   margin: 0 50%;
+              //   transform: translateX(-50%);
+              object-fit: contain;
+
+              @include respond-below(sm) {
+                width: unset;
+                height: unset;
+                object-fit: unset;
+                max-height: unset;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

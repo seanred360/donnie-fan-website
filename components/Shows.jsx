@@ -73,7 +73,7 @@ const test2 = () => {
 
             <div className="image-holder">
               <span className="image">
-                <img src="images/posters/from-zero-to-hero.jpg" alt="" />
+                <img src="images/posters/from-zero-to-hero.webp" alt="" />
               </span>
             </div>
           </div>

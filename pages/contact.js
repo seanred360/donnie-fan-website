@@ -7,6 +7,7 @@ import SectionHeader from "../components/common/SectionHeader";
 import { AiFillWechat, AiOutlineWeibo, AiOutlineMail } from "react-icons/ai";
 import { IoTicketSharp } from "react-icons/io5";
 import { MdPersonSearch } from "react-icons/md";
+import { FaTiktok } from "react-icons/fa";
 
 const contact = (props) => {
   const contactForm = useRef();
@@ -104,6 +105,7 @@ const contact = (props) => {
             />
             dj281444
           </span>
+
           <span>
             <AiOutlineWeibo
               style={{ marginRight: "10px" }}
@@ -111,6 +113,14 @@ const contact = (props) => {
               color="#f4c203"
             />
             DONNIEFANCOMEDY
+          </span>
+          <span>
+            <FaTiktok
+              style={{ marginRight: "10px" }}
+              size="32px"
+              color="#f4c203"
+            />
+            happyherom
           </span>
           <h4
             style={{

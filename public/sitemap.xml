@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>https://donniefan.com/</loc>
+	<lastmod>2022-03-30T00:04:31+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>https://donniefan.com/about</loc>
+	<lastmod>2022-03-30T00:04:31+01:00</lastmod>
+	<priority>0.2</priority>
+</url>
+<url>
+	<loc>https://donniefan.com/shows</loc>
+	<lastmod>2022-03-30T00:04:31+01:00</lastmod>
+	<priority>0.3</priority>
+</url>
+<url>
+	<loc>https://donniefan.com/videos</loc>
+	<lastmod>2022-03-30T00:04:31+01:00</lastmod>
+	<priority>0.3</priority>
+</url>
+<url>
+	<loc>https://donniefan.com/photos</loc>
+	<lastmod>2022-03-30T00:04:31+01:00</lastmod>
+	<priority>0.3</priority>
+</url>
+<url>
+	<loc>https://donniefan.com/contact</loc>
+	<lastmod>2022-03-30T00:04:31+01:00</lastmod>
+	<priority>0.3</priority>
+</url>
+</urlset>

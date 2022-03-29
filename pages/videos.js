@@ -14,7 +14,7 @@ const videos = () => {
         subHeader="A modern reimagining of the Greek tragedy"
       />
       <video controls muted autoPlay>
-        <source src="videos/medea-trailor.mp4" type="video/mp4"></source>
+        <source src="videos/medea-highlights.mp4" type="video/mp4"></source>
       </video>
       <p>
         Medea is a modern reimagining of what happens in the aftermath of the

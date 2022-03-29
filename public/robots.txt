@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
-Sitemap: https://donniefan.com/my_sitemap.xml
+Sitemap: https://donniefan.com/sitemap.xml

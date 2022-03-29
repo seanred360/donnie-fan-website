@@ -38,10 +38,17 @@
   width: 100vw;
   height: 100vh;
   margin-bottom: 36px;
-  background-image: url("/images/hero.webp");
+  // background-image: url("/images/hero.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 
   h1 {
     position: absolute;
@@ -70,8 +77,10 @@
   }
 
   h2 {
+    position: absolute;
+    top: 0;
     padding: 10px;
-    background-color: white;
+    background-color: $yellow;
     font-size: 16px;
   }
 }

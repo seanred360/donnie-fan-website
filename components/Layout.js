@@ -5,9 +5,12 @@ import { useRouter } from "next/router";
 import FadeInSection from "./common/utility/FadeInSection";
 import Shows from "../components/Shows";
 
+export const config = { amp: "hybrid" };
+
 const Layout = ({ children }) => {
   const router = useRouter();
   const path = router?.asPath;
+
   return (
     <>
       <Meta />
@@ -20,6 +23,10 @@ const Layout = ({ children }) => {
                 <h1>From Hero to Zero</h1>
               </span>
               <h2>Donnie Fan's debut standup comedy special!</h2>
+              <img
+                src="images/hero.webp"
+                alt="From Hero to Zero a 1 hour standup comedy special"
+              />
             </div>
           </FadeInSection>
           <FadeInSection>

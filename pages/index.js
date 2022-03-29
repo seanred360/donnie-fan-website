@@ -1,8 +1,6 @@
 import Meta from "../components/Meta";
-// import FadeInSection from "../components/common/utility/FadeInSection";
 import SocialMediaFeed from "../components/common/SocialMediaFeed";
 import styles from "../styles/pages/Home.module.scss";
-
 
 const home = () => {
   return (

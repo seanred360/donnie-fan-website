@@ -11,6 +11,15 @@ const Meta = ({ title, keywords, description }) => {
       <meta property="og:image" content="images/hero.webp"></meta>
       <meta charSet="utf-8" />
       <link rel="icon" href="/favicon.ico" />
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-LJZNFQN96K"
+      ></script>
+      <script>
+        window.dataLayer = window.dataLayer || []; function gtag()
+        {dataLayer.push(arguments)}
+        gtag('js', new Date()); gtag('config', 'G-LJZNFQN96K');
+      </script>
       <title>{title}</title>
     </Head>
   );

@@ -11,6 +11,7 @@ const home = () => {
         description="Longtime Beijing local is doing English stand up comedy in Beijing"
       />
       <div className={styles.container}>
+        {/* the rest of the page is in layout */}
         <SocialMediaFeed />
       </div>
     </>

@@ -4,18 +4,20 @@
 .container {
   z-index: 100;
   background: black;
+  border-bottom: 2px solid $yellow;
 
   .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: 1200px;
     height: 64px;
+    margin: 0 auto;
     padding: 16px 24px;
     padding-right: 16px;
     font-size: 16px;
     color: $white;
-    border-bottom: 2px solid $yellow;
 
     @include respond-above(lg) {
       height: 100px;

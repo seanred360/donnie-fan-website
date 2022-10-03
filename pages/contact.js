@@ -95,7 +95,7 @@ const contact = (props) => {
               size="32px"
               color="#f4c203"
             />
-            donniefancomedy@gmail.com
+            business@donniefan.com
           </span>
           <span>
             <AiFillWechat

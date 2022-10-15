@@ -1,40 +1,46 @@
 {
   "events": [
     {
-      "date": "Jul 29",
-      "cityName": "Hangzhou",
-      "timeLocation": "8:30pm | Wade's Wensan",
-      "poster": "images/posters/2022/poster-jul-29.jpg"
+      "date": "Aug 13, 2022",
+      "time": "7:30pm",
+      "city": "Shijiazhuang",
+      "venue": "Townple",
+      "poster": "images/posters/2022/poster-08-13-2022.jpg"
     },
     {
-      "date": "Jul 30",
-      "cityName": "Nanjing",
-      "timeLocation": "8:00 pm | Finnegan's Wake",
-      "poster": "images/posters/2022/poster-jul-30.jpg"
+      "date": "Aug 6, 2022",
+      "time": "9:30pm",
+      "city": "Changsha",
+      "venue": "The Red Lion",
+      "poster": "images/posters/2022/poster-08-06-2022.jpg"
     },
     {
-      "date": "Jul  31",
-      "cityName": "Ningbo",
-      "timeLocation": "6:00 pm | The Savoy",
-      "poster": "images/posters/2022/poster-jul-31.jpg"
+      "date": "Aug 5, 2022",
+      "time": "9:00pm",
+      "city": "Wuhan",
+      "venue": "Wuhan Comedy Club",
+      "poster": "images/posters/2022/poster-08-05-2022.jpg"
     },
     {
-      "date": "Aug 5",
-      "cityName": "Wuhan",
-      "timeLocation": "9:00 pm | Wuhan Comedy Club",
-      "poster": "images/posters/2022/poster-aug-5.jpg"
+      "date": "Jul 31, 2022",
+      "time": "6:00pm",
+      "city": "Ningbo",
+      "venue": "The Savoy",
+      "poster": "images/posters/2022/poster-07-31-2022.jpg"
     },
     {
-      "date": "Aug 6",
-      "cityName": "Changsha",
-      "timeLocation": "9:30 | The Red Lion",
-      "poster": "images/posters/2022/poster-aug-6.jpg"
+      "date": "Jul 30, 2022",
+      "time": "8:00pm",
+      "city": "Nanjing",
+      "venue": "Finnegan's Wake",
+      "poster": "images/posters/2022/poster-07-30-2022.jpg"
     },
     {
-      "date": "Aug 13",
-      "cityName": "Shijiazhuang",
-      "timeLocation": "Aug 13 | Townple",
-      "poster": "images/posters/2022/poster-aug-13.jpg"
+      "date": "Jul 29, 2022",
+      "time": "8:30pm",
+      "city": "Hangzhou",
+      "venue": "Wade's Wensan",
+      "poster": "images/posters/2022/poster-07-29-2022.jpg"
     }
   ]
 }

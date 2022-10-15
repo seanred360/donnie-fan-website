@@ -16,9 +16,9 @@ const about = () => {
         Donnie Fan is a long time Beijing local. He joined the comedy scene in
         2020. Since then he has performed all over China including Hangzhou,
         Nanjing, Ningbo and many others. Fan performs both English and Chinese
-        language comedy. As a writer he's worked on the opera play{" "}
-        <em>The Spring River Flows to the East(2014)</em>,{" "}
-        <em>The Return of Kesai(2017-AST Director/writer)</em>,{" "}
+        language comedy. As a writer he's worked on the opera play
+        <em>The Spring River Flows to the East(2014)</em>,
+        <em>The Return of Kesai(2017-AST Director/writer)</em>,
         <em>The Tony Show(2019)</em>, <em>Medea(2022-Director/Writer)</em> and
         <em>Haves and Have Lots(2022-Writer/Creative Director)</em>. Currently
         Donnie performs bi-weekly comedy shows at various venues in Beijing. He

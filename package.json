@@ -1,6 +1,7 @@
 {
-  "name": "donnie-fan-website-3",
-  "version": "0.1.0",
+  "name": "donnie-fan-website",
+  "version": "3.0.0",
+  "Author": "Sean Redmon seanred.io",
   "private": true,
   "scripts": {
     "dev": "next dev",

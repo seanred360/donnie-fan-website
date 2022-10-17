@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import { gsap, Expo } from "gsap";
 
 const Layout = ({ children }) => {
@@ -35,7 +35,7 @@ const Nav = () => {
         </button>
         <NavLinks />
       </div>
-      <NavMenu toggle={toggle} clickEvent={handleToggle} />
+      {toggle && <NavMenu toggle={toggle} clickEvent={handleToggle} />}
     </nav>
   );
 };
@@ -64,39 +64,38 @@ const NavMenu = ({ toggle, clickEvent }) => {
     };
   }, [toggle]);
 
-  if (toggle)
-    return (
-      <ul
-        ref={navMenuRef}
-        className="menu absolute z-[999] flex flex-col text-right w-screen h-screen bg-[black] bg-opacity-[90%] lg:hidden"
-      >
-        <li className="link">
-          <Link href="/about">
-            <span onClick={clickEvent}>About</span>
-          </Link>
-        </li>
-        <li className="link">
-          <Link href="/showtimes">
-            <span onClick={clickEvent}>Showtimes</span>
-          </Link>
-        </li>
-        <li className="link">
-          <Link href="/news">
-            <span onClick={clickEvent}>News</span>
-          </Link>
-        </li>
-        <li className="link">
-          <Link href="/medea">
-            <span onClick={clickEvent}>Medea</span>
-          </Link>
-        </li>
-        <li className="link">
-          <Link href="#contact">
-            <span onClick={clickEvent}>Contact</span>
-          </Link>
-        </li>
-      </ul>
-    );
+  return (
+    <ul
+      ref={navMenuRef}
+      className="menu absolute z-[999] flex flex-col text-right w-screen h-screen bg-[black] bg-opacity-[90%] lg:hidden"
+    >
+      <li className="link">
+        <Link href="/about">
+          <span onClick={clickEvent}>About</span>
+        </Link>
+      </li>
+      <li className="link">
+        <Link href="/showtimes">
+          <span onClick={clickEvent}>Showtimes</span>
+        </Link>
+      </li>
+      <li className="link">
+        <Link href="/news">
+          <span onClick={clickEvent}>News</span>
+        </Link>
+      </li>
+      <li className="link">
+        <Link href="/medea">
+          <span onClick={clickEvent}>Medea</span>
+        </Link>
+      </li>
+      <li className="link">
+        <Link href="#contact">
+          <span onClick={clickEvent}>Contact</span>
+        </Link>
+      </li>
+    </ul>
+  );
 };
 
 const NavLinks = () => {

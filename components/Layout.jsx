@@ -67,7 +67,7 @@ const NavMenu = ({ toggle, clickEvent }) => {
   return (
     <ul
       ref={navMenuRef}
-      className="menu absolute z-[999] flex flex-col text-right w-screen h-screen bg-[black] bg-opacity-[90%] lg:hidden"
+      className="menu absolute z-[999] flex flex-col text-right w-screen h-screen lg:hidden"
     >
       <li className="link">
         <Link href="/about">

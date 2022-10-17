@@ -69,6 +69,11 @@ body::-webkit-scrollbar-thumb:hover {
     border-radius: 100vw;
   }
 
+  .menu {
+    background: black;
+    color: white;
+  }
+
   h1,
   h2,
   h3,
@@ -77,9 +82,19 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
+@media (prefers-color-scheme: light) {
+  .menu {
+    background: white;
+  }
+}
+
 nav {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.menu {
+  opacity: 90%;
 }
 
 h1,

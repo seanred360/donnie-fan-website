@@ -31,7 +31,7 @@ const showtimes = () => {
 const Event = ({ date, time, city, venue, poster }) => {
   return (
     <div className="event w-full flex mb-[24px] text-[12px] lg:text-[32px] text-[black] lg:font-[500] text-center bg-[white]">
-      <div className="relative w-[80px] h-[100px] lg:w-[250px] lg:h-[250px] mr-auto">
+      <div className="relative w-[80px] h-[100px] lg:w-[250px] lg:h-[250px] mr-auto border-[4px] border-yellow">
         <Image
           src={"/" + poster}
           width="80"
@@ -41,7 +41,7 @@ const Event = ({ date, time, city, venue, poster }) => {
           alt="poster"
         />
       </div>
-      <div className="w-full grid grid-cols-3 items-center gap-[8px] lg:gap-[24px]">
+      <div className="w-full grid grid-cols-3 items-center gap-[8px] lg:gap-[24px] ">
         <span className="font-bold text-[11px] lg:text-[32px]">
           {date}
           <br />

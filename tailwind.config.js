@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./pages/**/*.{html,js,jsx}", "./components/**/*.{html,js,jsx}"],
+  darkMode: "media", // class, 'media' or boolean
   theme: {
     colors: {
       yellow: "#F4C203",

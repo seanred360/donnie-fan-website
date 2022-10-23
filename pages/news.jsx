@@ -23,7 +23,7 @@ const news = () => {
         />
         <MediaItem
           href="https://www.stevensirski.com/ssp28-donnie-fan/"
-          img="https://www.stevensirski.com/wp-content/uploads/2022/02/SSP28-Donnie-Fan-Wednesday-February-9-2022-02-1200-1038x576.png"
+          img="images/steven-siriski-podcast.png"
           text="Steven Siriski Podcast"
         />
         <MediaItem

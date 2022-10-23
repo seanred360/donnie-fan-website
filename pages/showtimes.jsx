@@ -30,7 +30,7 @@ const showtimes = () => {
 
 const Event = ({ date, time, city, venue, poster }) => {
   return (
-    <div className="event w-full flex mb-[24px] text-[12px] lg:text-[32px] text-[black] lg:font-[500] text-center bg-[white]">
+    <div className="event w-full flex mb-[24px] text-[12px] lg:text-[32px] text-[black] lg:font-[500] text-center bg-[black]/5 dark:bg-[white]">
       <div className="relative w-[80px] h-[100px] lg:w-[250px] lg:h-[250px] mr-auto border-[4px] border-yellow">
         <Image
           src={"/" + poster}

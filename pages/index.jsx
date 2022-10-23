@@ -4,6 +4,7 @@ import eventData from "../public/EventData.json";
 import Link from "next/link";
 import MediaItem from "../components/MediaItem";
 import Meta from "../components/Meta";
+import Image from "next/image";
 
 export default function Home() {
   const home = useRef();
@@ -133,9 +134,12 @@ const SectionAbout = () => {
     <section className="mb-0 bg-yellow text-[black]">
       <h3 className="my-[32px] text-[48px] font-black text-center">About</h3>
       <div className="h-full flex flex-wrap justify-center items-center gap-[32px] mx-auto md:pb-[32px]">
-        <img
-          className="w-[340px] h-[340px] md:m-0"
-          src="images/dj-gatsbys-close.jpg"
+        <Image
+          src="/images/dj-gatsbys-close.jpg"
+          width="340"
+          height="340"
+          layout="fixed"
+          objectFit="cover"
           alt="Donnie performing at Gatsby's"
         />
         <p className="max-w-[500px] text-[black] font-[500]">
@@ -154,7 +158,7 @@ const SectionAbout = () => {
 const SectionNews = () => {
   return (
     <section className="min-h-[500px] py-[32px] mb-0">
-      <h4 className="my-[32px]">News</h4>
+      <h4 className="my-[32px] mb-[48px]">News</h4>
       <div className="flex flex-wrap justify-center items-center gap-[16px]">
         <MediaItem
           href="/medea"
@@ -168,7 +172,7 @@ const SectionNews = () => {
         />
         <MediaItem
           href="https://www.stevensirski.com/ssp28-donnie-fan"
-          img="https://www.stevensirski.com/wp-content/uploads/2022/02/SSP28-Donnie-Fan-Wednesday-February-9-2022-02-1200-1038x576.png"
+          img="images/steven-siriski-podcast.png"
           text="Steven Sirski Podcast"
         />
       </div>

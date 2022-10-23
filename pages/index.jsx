@@ -145,7 +145,7 @@ const SectionAbout = () => {
           Donnie Fan is a long time Beijing local. He joined the comedy scene in
           2020. Since then he has performed all over China including Hangzhou,
           Nanjing, Ningbo and many others. <br />
-          <strong>
+          <strong className="hover:border-b-[1px]">
             <Link href="/about">Read more</Link>
           </strong>
         </p>

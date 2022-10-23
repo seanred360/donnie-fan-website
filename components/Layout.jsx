@@ -18,7 +18,7 @@ const Nav = () => {
   const handleToggle = () => setToggle(!toggle);
 
   return (
-    <nav>
+    <nav className="max-w-[1400px] mx-auto">
       <div className="flex justify-between items-center p-[24px]">
         <Link href="/">
           <img

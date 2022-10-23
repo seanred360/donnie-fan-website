@@ -1,6 +1,20 @@
 {
   "events": [
     {
+      "date": "Nov 5, 2022",
+      "time": "5-9pm",
+      "city": "Beijing",
+      "venue": "Journey to the East",
+      "poster": "images/posters/2022/jtte-donnie-fan.jpg"
+    },
+    {
+      "date": "Oct 30, 2022",
+      "time": "7-9pm",
+      "city": "Beijing",
+      "venue": "Herbal Sanlitun",
+      "poster": "images/posters/2022/poster-10-30-2022.jpg"
+    },
+    {
       "date": "Aug 13, 2022",
       "time": "7:30pm",
       "city": "Shijiazhuang",

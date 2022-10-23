@@ -95,16 +95,13 @@ const SectionBanner = () => {
         </h1>
       </span>
       <div>
-        <img
-          className="lg:hidden"
-          src="images/dj-comic-clean-lines-crop.png"
-          alt="Donnie"
-        />
-        <img
-          className="hidden lg:block"
-          src="images/dj-comic-clean-lines-extended.png"
-          alt="Donnie"
-        />
+        <picture>
+          <source
+            media="(min-width: 992px)"
+            srcSet="/images/dj-comic-clean-lines-extended.png"
+          />
+          <img src="images/dj-comic-clean-lines-crop.png" alt="Donnie" />
+        </picture>
       </div>
       <hr className="m-0" />
     </section>
@@ -156,7 +153,7 @@ const SectionAbout = () => {
 
 const SectionNews = () => {
   return (
-    <section className="py-[32px] mb-0">
+    <section className="min-h-[500px] py-[32px] mb-0">
       <h4 className="my-[32px]">News</h4>
       <div className="flex flex-wrap justify-center items-center gap-[16px]">
         <MediaItem

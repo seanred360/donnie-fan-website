@@ -160,30 +160,13 @@ const SectionNews = ({ news }) => {
       <div className="flex flex-wrap justify-center items-start gap-[16px]">
         {news.map((newsItem) => (
           <MediaItem
+            key={newsItem._id}
             href={newsItem.url}
             img={urlFor(newsItem.image).width(300).url()}
             text={newsItem.title}
           />
         ))}
       </div>
-
-      {/* <div className="flex flex-wrap justify-center items-center gap-[16px]">
-        <MediaItem
-          href="/medea"
-          img="images/medea-thumb.png"
-          text="Donnie Fan's Medea Play"
-        />
-        <MediaItem
-          href="https://www.thebeijinger.com/blog/2022/03/17/how-he-went-zero-hero-interview-stand-comedian-donnie-fan"
-          img="images/dj-beijinger.png"
-          text="The Beijinger"
-        />
-        <MediaItem
-          href="https://www.stevensirski.com/ssp28-donnie-fan"
-          img="images/steven-siriski-podcast.png"
-          text="Steven Sirski Podcast"
-        />
-      </div> */}
     </section>
   );
 };

@@ -14,6 +14,7 @@ const news = ({ news }) => {
       <div className="flex justify-center items-start flex-wrap gap-[24px] my-[48px]">
         {news.map((newsItem) => (
           <MediaItem
+            key={newsItem._id}
             href={newsItem.url}
             img={urlFor(newsItem.image).width(300).url()}
             text={newsItem.title}

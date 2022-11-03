@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { gsap, Expo } from "gsap";
+import Image from "next/image";
 
 const Layout = ({ children }) => {
   return (
@@ -21,11 +22,15 @@ const Nav = () => {
     <nav className="max-w-[1400px] mx-auto">
       <div className="flex justify-between items-center p-[24px]">
         <Link href="/">
-          <img
-            className="w-[50px] cursor-pointer"
-            src="images/logo.png"
-            alt="logo"
-          />
+          <div className="cursor-pointer">
+            <Image
+              src="/images/logo.png"
+              width="50px"
+              height="50px"
+              layout="fixed"
+              alt="logo"
+            />
+          </div>
         </Link>
         <button className="lg:hidden" onClick={handleToggle}>
           <Icon
@@ -133,7 +138,13 @@ const NavLinks = () => {
 const Footer = () => {
   return (
     <footer className="flex flex-col items-center mt-auto py-[24px] px-[32px] bg-yellow text-[black]">
-      <img className="w-[100px]" src="images/logo-reverse.png" alt="logo" />
+      <Image
+        src="/images/logo-reverse.png"
+        width="100px"
+        height="100px"
+        layout="fixed"
+        alt="logo"
+      />
       <section id="contact" className="flex-col my-[32px] lg:flex-row">
         <ul>
           <li>
@@ -164,11 +175,15 @@ const Footer = () => {
             </span>
           </li>
         </ul>
-        <img
-          className="w-[200px] m-[24px] border-[8px]"
-          src="images/donnie-wechat-qr.jpg"
-          alt=""
-        />
+        <div className="relative m-[24px]">
+          <Image
+            src="/images/donnie-wechat-qr.jpg"
+            width="200px"
+            height="200px"
+            layout="fixed"
+            alt="Wechat QR"
+          />
+        </div>
       </section>
       <span className="font-[500] text-[12px]">
         Copyright © 2022 Donnie Fan |{" "}

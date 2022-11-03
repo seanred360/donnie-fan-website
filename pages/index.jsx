@@ -1,12 +1,12 @@
 import { useEffect, useRef } from "react";
 import { gsap, Expo } from "gsap";
-import eventData from "../public/EventData.json";
 import Link from "next/link";
 import MediaItem from "../components/MediaItem";
 import Meta from "../components/Meta";
 import Image from "next/image";
+import { client, urlFor } from "../lib/client";
 
-export default function Home() {
+export default function Home({ events, news }) {
   const home = useRef();
 
   useEffect(() => {
@@ -69,9 +69,9 @@ export default function Home() {
       <hr className="border-bottom m-0" />
       <main>
         <SectionBanner />
-        <SectionShowtimes />
+        <SectionShowtimes events={events} />
         <SectionAbout />
-        <SectionNews />
+        <SectionNews news={news} />
       </main>
     </div>
   );
@@ -109,9 +109,7 @@ const SectionBanner = () => {
   );
 };
 
-const SectionShowtimes = () => {
-  const events = eventData["events"].slice(0, 4);
-
+const SectionShowtimes = ({ events }) => {
   return (
     <section className="flex justify-center items-center flex-wrap">
       <h2>SHOWTIMES</h2>
@@ -133,7 +131,7 @@ const SectionAbout = () => {
   return (
     <section className="mb-0 bg-yellow text-[black]">
       <h3 className="my-[32px] text-[48px] font-black text-center">About</h3>
-      <div className="h-full flex flex-wrap justify-center items-center gap-[32px] mx-auto md:pb-[32px]">
+      <div className="h-full flex flex-wrap justify-center items-center gap-[32px] mx-auto mb-[32px] md:pb-[32px]">
         <Image
           src="/images/dj-gatsbys-close.jpg"
           width="340"
@@ -155,11 +153,21 @@ const SectionAbout = () => {
   );
 };
 
-const SectionNews = () => {
+const SectionNews = ({ news }) => {
   return (
     <section className="min-h-[500px] py-[32px] mb-0">
       <h4 className="my-[32px] mb-[48px]">News</h4>
-      <div className="flex flex-wrap justify-center items-center gap-[16px]">
+      <div className="flex flex-wrap justify-center items-start gap-[16px]">
+        {news.map((newsItem) => (
+          <MediaItem
+            href={newsItem.url}
+            img={urlFor(newsItem.image).width(300).url()}
+            text={newsItem.title}
+          />
+        ))}
+      </div>
+
+      {/* <div className="flex flex-wrap justify-center items-center gap-[16px]">
         <MediaItem
           href="/medea"
           img="images/medea-thumb.png"
@@ -175,7 +183,7 @@ const SectionNews = () => {
           img="images/steven-siriski-podcast.png"
           text="Steven Sirski Podcast"
         />
-      </div>
+      </div> */}
     </section>
   );
 };
@@ -196,3 +204,17 @@ const Event = ({ event }) => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const eventQuery = '*[_type == "events"] | order(_createdAt desc)[0...4]';
+  const eventData = await client.fetch(eventQuery);
+  const newsQuery = '*[_type == "news"][0...4] | order(_createdAt desc)';
+  const newsData = await client.fetch(newsQuery);
+
+  return {
+    props: {
+      events: eventData,
+      news: newsData,
+    },
+  };
+}

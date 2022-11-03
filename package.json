@@ -1,6 +1,6 @@
 {
   "name": "donnie-fan-website",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "Author": "Sean Redmon seanred.io",
   "private": true,
   "scripts": {
@@ -11,8 +11,10 @@
     "export": "next export"
   },
   "dependencies": {
+    "@sanity/image-url": "^1.0.1",
     "gsap": "^3.11.3",
     "next": "^12.3.1",
+    "next-sanity": "^1.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

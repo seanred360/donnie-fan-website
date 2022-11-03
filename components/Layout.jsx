@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import Link from "next/link";
-import { useEffect, useRef, useState, useMemo } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap, Expo } from "gsap";
 
 const Layout = ({ children }) => {

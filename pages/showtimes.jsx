@@ -1,9 +1,8 @@
-import EventData from "../public/EventData.json";
 import Meta from "../components/Meta";
 import Image from "next/image";
+import { client, urlFor } from "../lib/client";
 
-const showtimes = () => {
-  const events = EventData["events"];
+const showtimes = ({ events }) => {
   return (
     <section className="max-w-[1400px] mx-auto">
       <Meta
@@ -15,12 +14,12 @@ const showtimes = () => {
       <div className="w-full mx-auto">
         {events.map((event) => (
           <Event
-            key={event.poster}
+            key={event._id}
             date={event.date}
             time={event.time}
             city={event.city}
             venue={event.venue}
-            poster={event.poster}
+            poster={urlFor(event.poster).width(250).url()}
           />
         ))}
       </div>
@@ -32,14 +31,7 @@ const Event = ({ date, time, city, venue, poster }) => {
   return (
     <div className="event w-full flex mb-[24px] text-[12px] lg:text-[32px] text-[black] lg:font-[500] text-center bg-[black]/5 dark:bg-[white]">
       <div className="relative w-[80px] h-[100px] lg:w-[250px] lg:h-[250px] mr-auto border-[4px] border-yellow">
-        <Image
-          src={"/" + poster}
-          width="80"
-          height="100"
-          layout="fill"
-          objectFit="cover"
-          alt="poster"
-        />
+        <Image src={poster} layout="fill" objectFit="cover" alt="poster" />
       </div>
       <div className="w-full grid grid-cols-3 items-center gap-[8px] lg:gap-[24px] ">
         <span className="font-bold text-[11px] lg:text-[32px]">
@@ -55,3 +47,12 @@ const Event = ({ date, time, city, venue, poster }) => {
 };
 
 export default showtimes;
+
+export async function getStaticProps() {
+  const query = '*[_type == "events"] | order(_createdAt desc)';
+  const eventData = await client.fetch(query);
+
+  return {
+    props: { events: eventData },
+  };
+}

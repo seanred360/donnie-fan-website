@@ -8,7 +8,7 @@ const MediaItem = ({ href, img, text }) => {
           width="300"
           height="150"
           layout="fixed"
-          src={"/" + img}
+          src={img}
           objectFit="cover"
           alt="thumbnail"
         />

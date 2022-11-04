@@ -28,7 +28,7 @@ const news = ({ news }) => {
 export default news;
 
 export async function getStaticProps() {
-  const query = '*[_type == "news"]';
+  const query = '*[_type == "news"] order(_createdAt desc)';
   const newsData = await client.fetch(query);
 
   return {

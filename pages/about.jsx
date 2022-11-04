@@ -24,7 +24,7 @@ const about = () => {
         Donnie performs bi-weekly comedy shows at various venues in Beijing. He
         is truely a workaholic and loves thinking of new ways to make you laugh.
         If you are looking for a community of expats and Chinese people who like
-        to have a drink and a laugh, please consider comming out to one of the
+        to have a drink and a laugh, please consider coming out to one of the
         bi-weekly shows.
       </p>
     </section>

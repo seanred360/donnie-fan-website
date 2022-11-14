@@ -189,7 +189,7 @@ const Event = ({ event }) => {
 };
 
 export async function getStaticProps() {
-  const eventQuery = '*[_type == "events"] | order(_createdAt desc)[0...4]';
+  const eventQuery = '*[_type == "events"] | order(date desc)[0...4]';
   const eventData = await client.fetch(eventQuery);
   const newsQuery = '*[_type == "news"][0...4] | order(date desc)';
   const newsData = await client.fetch(newsQuery);

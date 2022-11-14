@@ -49,7 +49,7 @@ const Event = ({ date, time, city, venue, poster }) => {
 export default showtimes;
 
 export async function getStaticProps() {
-  const query = '*[_type == "events"] | order(_createdAt desc)';
+  const query = '*[_type == "events"] | order(date desc)';
   const eventData = await client.fetch(query);
 
   return {

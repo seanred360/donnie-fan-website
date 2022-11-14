@@ -95,6 +95,11 @@ const NavMenu = ({ toggle, clickEvent }) => {
         </Link>
       </li>
       <li className="link">
+        <Link href="/specials">
+          <span onClick={clickEvent}>Specials</span>
+        </Link>
+      </li>
+      <li className="link">
         <Link href="#contact">
           <span onClick={clickEvent}>Contact</span>
         </Link>
@@ -124,6 +129,11 @@ const NavLinks = () => {
       <li className="link">
         <Link href="/medea">
           <span>Medea</span>
+        </Link>
+      </li>
+      <li className="link">
+        <Link href="/specials">
+          <span>Specials</span>
         </Link>
       </li>
       <li className="link">

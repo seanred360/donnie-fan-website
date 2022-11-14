@@ -1,4 +1,5 @@
 import Meta from "../components/Meta";
+import { Icon } from "@iconify/react";
 
 const medea = () => {
   return (
@@ -22,6 +23,12 @@ const medea = () => {
         root of tragedy. This Chinese language play ran from January 20th to
         21st 2022 at the 77 Theatre in Beijing (北京市东城区美术馆后街77号).
       </p>
+      <a
+        className="hover:text-yellow transition-all"
+        href="https://youtu.be/nouHLnKanyU"
+      >
+        <Icon width="50" icon="fa:youtube" />
+      </a>
     </section>
   );
 };

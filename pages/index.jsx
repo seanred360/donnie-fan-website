@@ -69,6 +69,7 @@ export default function Home({ events, news }) {
       <hr className="border-bottom m-0" />
       <main>
         <SectionBanner />
+        <SectionFeatured />
         <SectionShowtimes events={events} />
         <SectionAbout />
         <SectionNews news={news} />
@@ -89,7 +90,7 @@ const Overlay = () => {
 
 const SectionBanner = () => {
   return (
-    <section className="relative h-[calc(100vh-98px) 2xl:flex-row mt-0 pt-[32px]">
+    <section className="relative h-[calc(100vh-98px) 2xl:flex-row mt-0 pt-[32px] max-w-[1400px] mx-auto">
       <span className="w-full title overflow-hidden lg:w-auto">
         <h1 className="block h-[100px] m-0 mb-[32px] p-0 font-black text-[64px] lg:text-[100px] lg:h-[155px] lg:leading-[80px] lg:border-l-[20px]">
           DONNIE <br /> FAN
@@ -105,6 +106,20 @@ const SectionBanner = () => {
         </picture>
       </div>
       <hr className="m-0" />
+    </section>
+  );
+};
+
+const SectionFeatured = () => {
+  return (
+    <section>
+      <h2>Tour</h2>
+      <video className="my-[24px] mx-auto" controls muted autoPlay>
+        <source
+          src="/videos/end-of-donnie-fan-trailor.webm"
+          type="video/webm"
+        ></source>
+      </video>
     </section>
   );
 };

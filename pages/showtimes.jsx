@@ -60,5 +60,6 @@ export async function getStaticProps() {
 
   return {
     props: { events: eventData },
+    revalidate: 86400,
   };
 }

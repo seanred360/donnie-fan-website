@@ -19,7 +19,11 @@ const showtimes = ({ events }) => {
             time={event.time}
             city={event.city}
             venue={event.venue}
-            poster={event.poster ? urlFor(event.poster).width(250).url() : null}
+            poster={
+              event?.poster?.asset
+                ? urlFor(event.poster).width(250)?.url()
+                : null
+            }
           />
         ))}
       </div>

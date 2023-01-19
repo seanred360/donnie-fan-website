@@ -4,7 +4,7 @@ import { client, urlFor } from "../lib/client";
 
 const news = ({ news }) => {
   return (
-    <section>
+    <section className="max-w-[1400px] mx-auto">
       <Meta
         title="Donnie Fan's News"
         keywords="Standup comedy in beijing donnie steven siriski podcast cow pen comedy club china the beijinger"

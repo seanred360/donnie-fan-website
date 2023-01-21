@@ -19,8 +19,8 @@ const Nav = () => {
   const handleToggle = () => setToggle(!toggle);
 
   return (
-    <nav className="max-w-[1400px] mx-auto">
-      <div className="flex justify-between items-center p-[24px]">
+    <nav className="max-w-[1110px] mx-auto">
+      <div className="flex justify-between items-center p-[24px] md:px-[40px]">
         <Link href="/">
           <div className="cursor-pointer">
             <Image
@@ -155,7 +155,10 @@ const Footer = () => {
         layout="fixed"
         alt="logo"
       />
-      <section id="contact" className="flex-col my-[32px] lg:flex-row">
+      <section
+        id="contact"
+        className="flex-col my-[32px] lg:flex-row max-w-[1110px]"
+      >
         <ul>
           <li>
             <a

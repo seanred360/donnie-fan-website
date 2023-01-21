@@ -11,6 +11,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "@portabletext/react": "^2.0.0",
     "@sanity/image-url": "^1.0.1",
     "gsap": "^3.11.3",
     "next": "^12.3.1",

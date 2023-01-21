@@ -90,7 +90,7 @@ const Overlay = () => {
 
 const SectionBanner = () => {
   return (
-    <section className="relative h-[calc(100vh-98px) 2xl:flex-row mt-0 pt-[32px] max-w-[1400px] mx-auto">
+    <section className="relative h-[calc(100vh-98px) 2xl:flex-row mt-0 lg:mt-[135px] pt-[32px] max-w-[1110px] mx-auto">
       <span className="w-full title overflow-hidden lg:w-auto">
         <h1 className="block h-[100px] m-0 mb-[32px] p-0 font-black text-[64px] lg:text-[100px] lg:h-[155px] lg:leading-[80px] lg:border-l-[20px]">
           DONNIE <br /> FAN
@@ -146,7 +146,7 @@ const SectionAbout = () => {
   return (
     <section className="mb-0 bg-yellow text-[black]">
       <h3 className="my-[32px] text-[48px] font-black text-center">About</h3>
-      <div className="h-full flex flex-wrap justify-center items-center gap-[32px] mx-auto mb-[32px] md:pb-[32px]">
+      <div className="max-w-[1110px] flex flex-wrap justify-center items-center lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:justify-between gap-[32px] mx-auto my-[130px] md:pb-[32px] md:px-[32px]">
         <Image
           src="/images/dj-gatsbys-close.jpg"
           width="340"
@@ -155,7 +155,7 @@ const SectionAbout = () => {
           objectFit="cover"
           alt="Donnie performing at Gatsby's"
         />
-        <p className="max-w-[500px] text-[black] font-[500]">
+        <p className="text-[black] md:text-[24px] md:leading-[40px]">
           Donnie Fan is a long time Beijing local. He joined the comedy scene in
           2020. Since then he has performed all over China including Hangzhou,
           Nanjing, Ningbo and many others. <br />
@@ -172,7 +172,7 @@ const SectionNews = ({ news }) => {
   return (
     <section className="min-h-[500px] py-[32px] mb-0">
       <h4 className="my-[32px] mb-[48px]">News</h4>
-      <div className="flex flex-wrap justify-center items-start gap-[16px]">
+      <div className="max-w-[1110px] flex flex-wrap justify-center lg:justify-between lg:items-start gap-[16px]">
         {news.map((newsItem) => (
           <MediaItem
             key={newsItem._id}

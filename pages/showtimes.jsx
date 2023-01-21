@@ -4,7 +4,7 @@ import { client, urlFor } from "../lib/client";
 
 const showtimes = ({ events }) => {
   return (
-    <section className="max-w-[1400px] mx-auto">
+    <section className="max-w-[1110px] mx-auto">
       <Meta
         title="Stand-up Comedy in Beijing"
         keywords="where can I see standup comedy in beijing english comedy club china"

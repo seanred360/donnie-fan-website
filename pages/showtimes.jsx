@@ -43,14 +43,14 @@ const Event = ({ date, time, city, venue, poster }) => {
           alt="poster"
         />
       </div>
-      <div className="w-full grid grid-cols-3 items-center gap-[8px] lg:gap-[24px] ">
-        <span className="font-bold text-[11px] lg:text-[32px]">
+      <div className="w-full grid grid-cols-3 items-center gap-[8px] lg:gap-[24px] p-[16px] text-left leading-[1.5rem]">
+        <p className="font-bold text-[11px] lg:text-[32px] leading-[1.5rem]">
           {date}
           <br />
           {time}
-        </span>
-        <span>{city}</span>
-        <span>{venue}</span>
+        </p>
+        <p className="leading-[1.5rem]">{city}</p>
+        <p className="leading-[1.5rem] md:text-[18px]">{venue}</p>
       </div>
     </div>
   );

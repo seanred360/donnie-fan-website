@@ -134,7 +134,7 @@ const SectionShowtimes = ({ events }) => {
 
       <button
         href="/shows"
-        className="w-[340px] px-[32px] py-[12px] border-yellow border-[4px] text-[24px] hover:bg-yellow hover:text-[black]"
+        className="w-[340px] my-[38px] px-[32px] py-[12px] border-yellow border-[4px] text-[24px] hover:bg-yellow hover:text-[black]"
       >
         <Link href="/showtimes">View All</Link>
       </button>

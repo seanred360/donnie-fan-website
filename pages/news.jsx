@@ -28,10 +28,10 @@ const news = ({ news }) => {
 export default news;
 
 export async function getStaticProps() {
-  const query = '*[_type == "news"] | order(date asc)';
+  const query = '*[_type == "news"] | order(date desc)';
   const newsData = await client.fetch(query);
 
   return {
-    props: { news: newsData.reverse() },
+    props: { news: newsData },
   };
 }

@@ -198,21 +198,23 @@ const Event = ({ event }) => {
       <span className="my-[12px] font-black text-[32px] capitalize">
         {city}
       </span>
-      <span className="font-[500] text-[24px] capitalize">{venue}</span>
+      <span className="font-[500] text-[12px] capitalize">{venue}</span>
     </div>
   );
 };
 
 export async function getStaticProps() {
-  const eventQuery = '*[_type == "events"] | order(date desc)[0...4]';
+  // const eventQuery = '*[_type == "events"] | order(date desc)[0...4]';
+  const eventQuery =
+    '*[_type == "events" && dateTime(string(date) + "T00:00:00.00Z")  >= dateTime(now()) - 60*60*24*7] | order(date desc)[0...4]';
   const eventData = await client.fetch(eventQuery);
-  const newsQuery = '*[_type == "news"][0...4] | order(date desc)';
+  const newsQuery = '*[_type == "news"] | order(date desc)';
   const newsData = await client.fetch(newsQuery);
 
   return {
     props: {
       events: eventData,
-      news: newsData,
+      news: newsData.slice(0, 6),
     },
   };
 }

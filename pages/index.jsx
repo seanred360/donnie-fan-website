@@ -32,13 +32,13 @@ export default function Home({ events, news }) {
         ease: Expo.easeInOut,
       });
 
-      // gsap.from(".call-to-action", {
-      //   duration: 1,
-      //   delay: 2.8,
-      //   opacity: 0,
-      //   x: -20,
-      //   ease: Expo.easeInOut,
-      // });
+      gsap.from(".call-to-action", {
+        duration: 1,
+        delay: 2.8,
+        opacity: 0,
+        x: -20,
+        ease: Expo.easeInOut,
+      });
 
       gsap.from(".border-bottom", {
         delay: 1.4,
@@ -92,9 +92,12 @@ const SectionBanner = () => {
   return (
     <section className="relative h-[calc(100vh-98px) 2xl:flex-row mt-0 lg:mt-[135px] pt-[32px] max-w-[1110px] mx-auto">
       <span className="w-full title overflow-hidden lg:w-auto">
-        <h1 className="block h-[100px] m-0 mb-[32px] p-0 font-black text-[64px] lg:text-[100px] lg:h-[155px] lg:leading-[80px] lg:border-l-[20px]">
+        <h1 className="block h-[100px] m-0  p-0 font-black text-[64px] lg:text-[100px] lg:h-[155px] lg:leading-[80px] lg:border-l-[20px]">
           DONNIE <br /> FAN
         </h1>
+        <span className="call-to-action mb-[32px] italic tracking-[2px]">
+          Stand-Up Comedian
+        </span>
       </span>
       <div>
         <picture>

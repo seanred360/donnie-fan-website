@@ -17,6 +17,7 @@ const Layout = ({ children }) => {
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
   const handleToggle = () => setToggle(!toggle);
+  const links = ["about", "showtimes", "news", "medea", "specials", "contact"];
 
   return (
     <nav className="max-w-[1110px] mx-auto">
@@ -32,20 +33,23 @@ const Nav = () => {
             />
           </div>
         </Link>
+        <NavLinks links={links} />
+        {/* mobile */}
         <button className="lg:hidden" onClick={handleToggle}>
           <Icon
             width="50"
             icon={`${toggle ? "eva:close-fill" : "dashicons:menu-alt"}`}
           />
         </button>
-        <NavLinks />
       </div>
-      {toggle && <NavMenu toggle={toggle} clickEvent={handleToggle} />}
+      {toggle && (
+        <MobileMenu links={links} toggle={toggle} clickEvent={handleToggle} />
+      )}
     </nav>
   );
 };
 
-const NavMenu = ({ toggle, clickEvent }) => {
+const MobileMenu = ({ links, toggle, clickEvent }) => {
   const navMenuRef = useRef();
 
   useEffect(() => {
@@ -72,75 +76,37 @@ const NavMenu = ({ toggle, clickEvent }) => {
   return (
     <ul
       ref={navMenuRef}
-      className="bg-[white]/90 dark:bg-[black]/90 absolute z-[999] flex flex-col text-right w-screen h-screen lg:hidden"
+      className="bg-[white]/90 dark:bg-[black]/90 absolute z-[999] flex justify-between items-end flex-col text-right w-screen h-screen lg:hidden"
     >
-      <li className="link">
-        <Link href="/about">
-          <span onClick={clickEvent}>About</span>
-        </Link>
-      </li>
-      <li className="link">
-        <Link href="/showtimes">
-          <span onClick={clickEvent}>Showtimes</span>
-        </Link>
-      </li>
-      <li className="link">
-        <Link href="/news">
-          <span onClick={clickEvent}>News</span>
-        </Link>
-      </li>
-      <li className="link">
-        <Link href="/medea">
-          <span onClick={clickEvent}>Medea</span>
-        </Link>
-      </li>
-      <li className="link">
-        <Link href="/specials">
-          <span onClick={clickEvent}>Specials</span>
-        </Link>
-      </li>
-      <li className="link">
-        <Link href="#contact">
-          <span onClick={clickEvent}>Contact</span>
-        </Link>
-      </li>
+      {links.map((link) => (
+        <li
+          key={link + "mobile"}
+          className="link mr-[24px] text-[48px] font-[900] cursor-pointer"
+        >
+          <Link href={`/${link}`}>
+            <span className="capitalize" onClick={clickEvent}>
+              {link}
+            </span>
+          </Link>
+        </li>
+      ))}
     </ul>
   );
 };
 
-const NavLinks = () => {
+const NavLinks = ({ links }) => {
   return (
     <ul className="hidden lg:flex items-center">
-      <li className="link">
-        <Link href="/about">
-          <span>About</span>
-        </Link>
-      </li>
-      <li className="link">
-        <Link href="/showtimes">
-          <span>Showtimes</span>
-        </Link>
-      </li>
-      <li className="link">
-        <Link href="/news">
-          <span>News</span>
-        </Link>
-      </li>
-      <li className="link">
-        <Link href="/medea">
-          <span>Medea</span>
-        </Link>
-      </li>
-      <li className="link">
-        <Link href="/specials">
-          <span>Specials</span>
-        </Link>
-      </li>
-      <li className="link">
-        <Link href="#contact">
-          <span>Contact</span>
-        </Link>
-      </li>
+      {links.map((link) => (
+        <li
+          key={link + "desktop"}
+          className="link mr-[24px] text-[24px] cursor-pointer hover:border-b-[4px] border-solid border-yellow transition-all"
+        >
+          <Link href={`/${link}`}>
+            <span className="capitalize text-[white]">{link}</span>
+          </Link>
+        </li>
+      ))}
     </ul>
   );
 };

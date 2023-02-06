@@ -111,28 +111,6 @@ hr {
   margin: 24px 0;
 }
 
-.link {
-  margin-top: 24px;
-  margin-bottom: 24px;
-  margin-right: 24px;
-  font-size: 48px;
-  font-weight: 900;
-  cursor: pointer;
-}
-
-.link:hover {
-  border-bottom: 4px solid var(--yellow);
-}
-
-@media (min-width: 992px) {
-  .link {
-    height: 50px;
-    font-size: 24px;
-    font-weight: 400;
-    transition: all 0.3s ease;
-  }
-}
-
 .overlay {
   position: absolute;
   width: 100%;

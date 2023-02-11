@@ -22,15 +22,17 @@ const BlogPost = ({ post }) => {
             key={paragraph._key}
             className="flex justify-center items-center px-0 mb-[41px]"
           >
-            <figure className="flex flex-col justify-center items-center">
-              <img
-                src={urlFor(paragraph?.image).width(300).url()}
-                alt={paragraph?.caption}
-              />
-              <figcaption className="my-[27px] italic text-[14px] font-[300] leading-[28px] max-w-[300px]">
-                {paragraph?.caption}
-              </figcaption>
-            </figure>
+            {paragraph.image && (
+              <figure className="flex flex-col justify-center items-center">
+                <img
+                  src={urlFor(paragraph?.image)?.width(300)?.url()}
+                  alt={paragraph?.caption}
+                />
+                <figcaption className="my-[27px] italic text-[14px] font-[300] leading-[28px] max-w-[300px]">
+                  {paragraph?.caption}
+                </figcaption>
+              </figure>
+            )}
             <div className="leading-[32px] lg:text-[20px] lg:leading-[40px]">
               <PortableText value={paragraph?.text} />
             </div>

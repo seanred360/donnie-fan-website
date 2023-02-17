@@ -1,6 +1,5 @@
 import { client, urlFor } from "../lib/client";
 import Link from "next/link";
-import Image from "next/image";
 
 const blog = ({ blogPosts }) => {
   return (
@@ -15,7 +14,7 @@ const blog = ({ blogPosts }) => {
               <div className="relative w-full h-[150px] overflow-hidden">
                 <img src={urlFor(post.thumbnail).width(300).url()} />
               </div>
-              <p className="mt-[16px] text-[18px] font-[700]">{post.title}</p>
+              <p className="mt-[16px] font-[700]">{post.title}</p>
               <p className="h-[100px] my-[16px] text-[12px] text-ellipsis overflow-hidden">
                 {post.summary}
               </p>
@@ -33,7 +32,7 @@ const blog = ({ blogPosts }) => {
 };
 
 export async function getStaticProps() {
-  const blogQuery = '*[_type == "blog"] | order(date desc)';
+  const blogQuery = '*[_type == "blog"] | order(_createdAt desc)';
   const blogData = await client.fetch(blogQuery);
 
   return {

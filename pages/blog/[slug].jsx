@@ -10,7 +10,7 @@ const BlogPost = ({ post }) => {
         description={post.summary}
         ogType="article"
         ogUrl={`https://donniefan.com/blog/${post.slug.current}`}
-        image={urlFor(post?.paragraphs[0]?.image).url()}
+        image={urlFor(post?.thumbnail)?.url()}
       />
       <main className="max-w-[1110px] mx-auto px-[24px] md:px-[40px]">
         <h1 className="text-[26px] mt-[41px] mb-0">{post.title}</h1>

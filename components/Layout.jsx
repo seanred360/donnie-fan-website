@@ -3,13 +3,31 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { gsap, Expo } from "gsap";
 import Image from "next/image";
+import Script from "next/script";
 
 const Layout = ({ children }) => {
   return (
     <>
+      <GoogleAnalytics />
       <Nav />
       {children}
       <Footer />
+    </>
+  );
+};
+
+const GoogleAnalytics = () => {
+  return (
+    <>
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-LJZNFQN96K"
+      />
+      <Script>
+        {`window.dataLayer = window.dataLayer || []; function gtag()
+        {dataLayer.push(arguments)}
+        gtag('js', new Date()); gtag('config', 'G-LJZNFQN96K');`}
+      </Script>
     </>
   );
 };
@@ -111,7 +129,7 @@ const NavLinks = ({ links }) => {
           className="link mr-[24px] text-[24px] cursor-pointer hover:border-b-[4px] border-solid border-yellow transition-all"
         >
           <Link href={`/${link}`}>
-            <span className="capitalize text-[white]">{link}</span>
+            <span className="capitalize">{link}</span>
           </Link>
         </li>
       ))}

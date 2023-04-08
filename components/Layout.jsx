@@ -35,15 +35,7 @@ const GoogleAnalytics = () => {
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
   const handleToggle = () => setToggle(!toggle);
-  const links = [
-    "about",
-    "showtimes",
-    "blog",
-    "news",
-    "medea",
-    "specials",
-    "contact",
-  ];
+  const links = ["about", "showtimes", "blog", "news", "medea", "specials"];
 
   return (
     <nav className="max-w-[1110px] mx-auto">

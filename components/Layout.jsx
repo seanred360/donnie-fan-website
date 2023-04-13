@@ -3,31 +3,13 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { gsap, Expo } from "gsap";
 import Image from "next/image";
-import Script from "next/script";
 
 const Layout = ({ children }) => {
   return (
     <>
-      <GoogleAnalytics />
       <Nav />
       {children}
       <Footer />
-    </>
-  );
-};
-
-const GoogleAnalytics = () => {
-  return (
-    <>
-      <Script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-LJZNFQN96K"
-      />
-      <Script id="google-analytics">
-        {`window.dataLayer = window.dataLayer || []; function gtag()
-        {dataLayer.push(arguments)}
-        gtag('js', new Date()); gtag('config', 'G-LJZNFQN96K');`}
-      </Script>
     </>
   );
 };

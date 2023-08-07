@@ -52,8 +52,6 @@ Users should be able to:
 - [rss to json](https://rss2json.com/)
 - [React functionals components and hooks] - I moved away from the class based component workflow.
 
-This is my first paid gig.
-
 #### Creating a custom Weibo feed
 
 ![screenshot](./src/images/screenshots/homepage-preview-desktop.gif)
